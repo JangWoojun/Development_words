@@ -5,10 +5,108 @@
     android:layout_height="match_parent"
     tools:context=".fragment.StudyFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:background="#404258"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="70sp"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_marginBottom="10sp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:src="@drawable/home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/home" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:text="@string/home_text"
+                android:textColor="#c8c8c8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginBottom="10sp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:src="@drawable/words"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/words_icon" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:text="@string/words"
+                android:textColor="#c8c8c8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="10sp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:src="@drawable/learninig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/study" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:text="@string/study_text"
+                android:textColor="#c8c8c8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="10sp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:src="@drawable/setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/setting" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:text="@string/setting_text"
+                android:textColor="#c8c8c8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </FrameLayout>
