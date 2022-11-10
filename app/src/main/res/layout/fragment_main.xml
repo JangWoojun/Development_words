@@ -120,6 +120,7 @@
                 app:layout_constraintTop_toTopOf="@+id/progressBar" />
 
             <com.airbnb.lottie.LottieAnimationView
+                android:layout_marginBottom="15sp"
                 android:id="@+id/lottieAnimationView"
                 android:layout_width="190sp"
                 android:layout_height="190sp"
