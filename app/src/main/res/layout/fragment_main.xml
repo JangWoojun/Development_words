@@ -300,6 +300,7 @@
 
 
         <LinearLayout
+            android:id="@+id/home"
             android:layout_marginBottom="10sp"
             android:layout_weight="1"
             android:layout_width="match_parent"
@@ -308,7 +309,7 @@
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
-                android:src="@drawable/home"
+                android:src="@drawable/home_f"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/home" />
@@ -316,7 +317,7 @@
             <TextView
                 android:layout_gravity="center"
                 android:text="@string/home_text"
-                android:textColor="#c8c8c8"
+                android:textColor="#D7263D"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
@@ -324,6 +325,7 @@
 
 
         <LinearLayout
+            android:id="@+id/words"
             android:layout_marginBottom="10sp"
             android:layout_weight="1"
             android:layout_width="match_parent"
@@ -347,6 +349,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/learning"
             android:layout_marginBottom="10sp"
             android:layout_weight="1"
             android:layout_width="match_parent"
@@ -355,7 +358,7 @@
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
-                android:src="@drawable/learninig"
+                android:src="@drawable/learning"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/study" />
@@ -370,6 +373,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/setting"
             android:layout_marginBottom="10sp"
             android:layout_weight="1"
             android:layout_width="match_parent"
