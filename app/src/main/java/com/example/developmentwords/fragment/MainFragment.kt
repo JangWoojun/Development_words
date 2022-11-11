@@ -5,9 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import com.example.developmentwords.R
+import com.example.developmentwords.databinding.FragmentMainBinding
+import com.example.developmentwords.databinding.FragmentSettingBinding
 
 class MainFragment : Fragment() {
+
+    private var _binding: FragmentMainBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,10 +25,25 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        // it.findNAvContraller().navigate(R.id.프레그먼트 이름)으로 프레그먼트 이동
+        _binding = FragmentMainBinding.inflate(inflater, container, false)
 
-        return inflater.inflate(R.layout.fragment_main, container, false)
+        binding.words.setOnClickListener{
+            it.findNavController().navigate(R.id.action_mainFragment_to_wordFragment)
+        }
+        binding.learning.setOnClickListener{
+            it.findNavController().navigate(R.id.action_mainFragment_to_studyFragment)
+        }
+        binding.setting.setOnClickListener{
+            it.findNavController().navigate(R.id.action_mainFragment_to_settingFragment)
+        }
+
+        return binding.root
+
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 
 }
