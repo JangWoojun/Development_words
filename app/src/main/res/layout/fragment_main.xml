@@ -17,40 +17,47 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_marginTop="10sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:layout_marginTop="10sp"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="15sp"
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
                     android:text="@string/header_text"
                     android:textColor="@color/white"
                     android:textSize="26sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <LinearLayout
-                    android:layout_marginTop="5sp"
+                    android:orientation="vertical"
                     android:layout_width="80sp"
-                    android:layout_marginStart="40sp"
                     android:layout_height="80sp"
-                    android:background="@drawable/radius_white">
+                    android:background="@drawable/radius_white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.8"
+                    app:layout_constraintStart_toEndOf="@+id/textView2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/rocket_4311575"
-                        android:contentDescription="@string/rocket" />
+                        android:contentDescription="@string/rocket"
+                        android:src="@drawable/rocket_4311575" />
 
                 </LinearLayout>
 
 
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
                 android:layout_marginTop="70sp"
@@ -87,7 +94,7 @@
                         android:textSize="32sp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toStartOf="@+id/lottieAnimationView"
-                        app:layout_constraintHorizontal_bias="0.4"
+                        app:layout_constraintHorizontal_bias="0.3"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
