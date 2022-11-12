@@ -26,7 +26,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
-            android:id="@+id/linearLayout1"
+            android:id="@+id/csWords"
             android:layout_width="300sp"
             android:layout_height="200sp"
             android:background="@drawable/radius_red"
@@ -57,13 +57,13 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/linearLayout1"
-            app:layout_constraintEnd_toEndOf="@+id/linearLayout1"
-            app:layout_constraintStart_toStartOf="@+id/linearLayout1" />
+            app:layout_constraintBottom_toBottomOf="@+id/csWords"
+            app:layout_constraintEnd_toEndOf="@+id/csWords"
+            app:layout_constraintStart_toStartOf="@+id/csWords" />
 
 
         <LinearLayout
-            android:id="@+id/linearLayout2"
+            android:id="@+id/englishWord"
             android:layout_width="300sp"
             android:layout_height="200sp"
             android:background="@drawable/radius_red"
@@ -92,9 +92,9 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginBottom="10sp"
-            app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
-            app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
-            app:layout_constraintStart_toStartOf="@+id/linearLayout2"/>
+            app:layout_constraintBottom_toBottomOf="@+id/englishWord"
+            app:layout_constraintEnd_toEndOf="@+id/englishWord"
+            app:layout_constraintStart_toStartOf="@+id/englishWord"/>
 
         <LinearLayout
             android:layout_width="match_parent"
