@@ -13,12 +13,13 @@
 
 
         <TextView
+            android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="32dp"
             android:layout_marginTop="36dp"
-            android:text="단어장"
+            android:text="@string/words"
             android:textColor="@color/white"
             android:textSize="26sp"
             android:textStyle="bold"
