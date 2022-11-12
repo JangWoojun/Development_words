@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_wordFragment_to_settingFragment"
             app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_wordFragment_to_csWordFragment"
+            app:destination="@id/csWordFragment" />
     </fragment>
     <fragment
         android:id="@+id/studyFragment"
@@ -34,6 +37,9 @@
         <action
             android:id="@+id/action_studyFragment_to_settingFragment"
             app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_studyFragment_to_csWordFragment"
+            app:destination="@id/csWordFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingFragment"
@@ -49,6 +55,9 @@
         <action
             android:id="@+id/action_settingFragment_to_wordFragment"
             app:destination="@id/wordFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_csWordFragment"
+            app:destination="@id/csWordFragment" />
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
@@ -64,5 +73,26 @@
         <action
             android:id="@+id/action_mainFragment_to_settingFragment"
             app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_csWordFragment"
+            app:destination="@id/csWordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/csWordFragment"
+        android:name="com.example.developmentwords.fragment.CsWordFragment"
+        android:label="fragment_cs_word"
+        tools:layout="@layout/fragment_cs_word" >
+        <action
+            android:id="@+id/action_csWordFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_csWordFragment_to_studyFragment"
+            app:destination="@id/studyFragment" />
+        <action
+            android:id="@+id/action_csWordFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_csWordFragment_to_wordFragment"
+            app:destination="@id/wordFragment" />
     </fragment>
 </navigation>
