@@ -37,6 +37,19 @@ class MainFragment : Fragment() {
             it.findNavController().navigate(R.id.action_mainFragment_to_settingFragment)
         }
 
+        binding.linearLayout.setOnClickListener {
+            it.findNavController().navigate(R.id.action_mainFragment_to_csWordFragment)
+        }
+        binding.linearLayout3.setOnClickListener {
+            it.findNavController().navigate(R.id.action_mainFragment_to_englishWordFragment)
+        }
+        binding.linearLayout2.setOnClickListener {
+            it.findNavController().navigate(R.id.action_mainFragment_to_csStudyFragment)
+        }
+        binding.linearLayout5.setOnClickListener {
+            it.findNavController().navigate(R.id.action_mainFragment_to_englishStudyFragment)
+        }
+
         return binding.root
 
     }
