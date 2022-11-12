@@ -35,6 +35,13 @@ class WordFragment : Fragment() {
             it.findNavController().navigate(R.id.action_wordFragment_to_settingFragment)
         }
 
+        binding.csWords.setOnClickListener {
+            it.findNavController().navigate(R.id.action_wordFragment_to_csWordFragment)
+        }
+        binding.englishWord.setOnClickListener {
+            it.findNavController().navigate(R.id.action_wordFragment_to_englishWordFragment)
+        }
+
 
         return binding.root
     }
