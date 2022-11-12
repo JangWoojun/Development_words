@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_wordFragment_to_csWordFragment"
             app:destination="@id/csWordFragment" />
+        <action
+            android:id="@+id/action_wordFragment_to_englishWordFragment"
+            app:destination="@id/englishWordFragment" />
     </fragment>
     <fragment
         android:id="@+id/studyFragment"
@@ -40,6 +43,9 @@
         <action
             android:id="@+id/action_studyFragment_to_csWordFragment"
             app:destination="@id/csWordFragment" />
+        <action
+            android:id="@+id/action_studyFragment_to_englishWordFragment"
+            app:destination="@id/englishWordFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingFragment"
@@ -58,6 +64,9 @@
         <action
             android:id="@+id/action_settingFragment_to_csWordFragment"
             app:destination="@id/csWordFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_englishWordFragment"
+            app:destination="@id/englishWordFragment" />
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
@@ -76,6 +85,9 @@
         <action
             android:id="@+id/action_mainFragment_to_csWordFragment"
             app:destination="@id/csWordFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_englishWordFragment"
+            app:destination="@id/englishWordFragment" />
     </fragment>
     <fragment
         android:id="@+id/csWordFragment"
@@ -94,5 +106,29 @@
         <action
             android:id="@+id/action_csWordFragment_to_wordFragment"
             app:destination="@id/wordFragment" />
+        <action
+            android:id="@+id/action_csWordFragment_to_englishWordFragment"
+            app:destination="@id/englishWordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/englishWordFragment"
+        android:name="com.example.developmentwords.fragment.EnglishWordFragment"
+        android:label="fragment_english_word"
+        tools:layout="@layout/fragment_english_word" >
+        <action
+            android:id="@+id/action_englishWordFragment_to_csWordFragment"
+            app:destination="@id/csWordFragment" />
+        <action
+            android:id="@+id/action_englishWordFragment_to_wordFragment"
+            app:destination="@id/wordFragment" />
+        <action
+            android:id="@+id/action_englishWordFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_englishWordFragment_to_studyFragment"
+            app:destination="@id/studyFragment" />
+        <action
+            android:id="@+id/action_englishWordFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
     </fragment>
 </navigation>
