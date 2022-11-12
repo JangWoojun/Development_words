@@ -35,6 +35,13 @@ class StudyFragment : Fragment() {
             it.findNavController().navigate(R.id.action_studyFragment_to_settingFragment)
         }
 
+        binding.linearLayout1.setOnClickListener {
+            it.findNavController().navigate(R.id.action_studyFragment_to_csStudyFragment)
+        }
+        binding.linearLayout2.setOnClickListener {
+            it.findNavController().navigate(R.id.action_studyFragment_to_englishStudyFragment)
+        }
+
 
         return binding.root
     }
