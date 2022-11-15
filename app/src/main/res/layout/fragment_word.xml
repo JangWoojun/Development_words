@@ -7,7 +7,7 @@
     tools:context=".fragment.WordFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="#404258"
+        android:background="@color/backgroundColor"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -101,7 +101,7 @@
             android:layout_width="match_parent"
             android:layout_height="70sp"
             android:layout_gravity="bottom"
-            android:background="#404258"
+            android:background="@color/backgroundColor"
             android:baselineAligned="false"
             android:gravity="bottom"
             android:orientation="horizontal"

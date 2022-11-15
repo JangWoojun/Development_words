@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#404258"
+    android:background="@color/backgroundColor"
     tools:context=".fragment.MainFragment">
 
     <ScrollView
@@ -164,10 +164,11 @@
                     app:layout_constraintVertical_bias="0.3">
 
                     <TextView
+                        android:id="@+id/statText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="유저님의 스테이터스는\nCS Level1  /  영어 Level2 입니다"
+                        android:text="@string/statText"
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         android:textStyle="bold" />
