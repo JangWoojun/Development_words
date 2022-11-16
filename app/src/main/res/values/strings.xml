@@ -20,5 +20,5 @@
     <string name="study_text">학습</string>
     <string name="study">study</string>
     <string name="words_icon">words</string>
-    <string name="statText">유저님의 스테이터스는\nCS Level$d / 영어 Level$d 입니다</string>
+    <string name="statText">스테이터스 로딩중…</string>
 </resources>
