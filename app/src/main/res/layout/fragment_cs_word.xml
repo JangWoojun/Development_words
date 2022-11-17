@@ -7,15 +7,11 @@
     android:background="@color/backgroundColor"
     tools:context=".fragment.CsWordFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <TextView
-            android:textSize="50sp"
-            android:text="CS"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -128,8 +124,5 @@
             </LinearLayout>
 
         </LinearLayout>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
