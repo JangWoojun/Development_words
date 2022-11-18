@@ -7,15 +7,17 @@
     android:background="@color/backgroundColor"
     tools:context=".fragment.EnglishWordFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TextView
-            android:textSize="50sp"
-            android:text="English"
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_weight="1"
+            tools:listitem="@layout/list_item"
+            android:id="@+id/list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="0dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -130,6 +132,6 @@
         </LinearLayout>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </FrameLayout>
