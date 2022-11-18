@@ -45,6 +45,7 @@ class CsWordAdapter(private val cswords : List<Word>) : RecyclerView.Adapter<CsW
 
         fun bind(csword : Word) {
             binding.listItemText1.text = csword.word
+            binding.listItemText4.text = csword.mean
         }
     }
 
