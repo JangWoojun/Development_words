@@ -17,7 +17,7 @@
             android:layout_height="wrap_content">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_marginTop="30sp"
+                android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -26,7 +26,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="22sp"
+                    android:layout_marginStart="22dp"
                     android:text="@string/header_text"
                     android:textColor="@color/white"
                     android:textSize="28sp"
@@ -37,8 +37,8 @@
 
                 <LinearLayout
                     android:orientation="vertical"
-                    android:layout_width="80sp"
-                    android:layout_height="80sp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:background="@drawable/radius_white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -59,14 +59,14 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
-                android:layout_marginTop="70sp"
+                android:layout_marginTop="70dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_margin="10sp"
+                    android:layout_margin="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="200sp"
+                    android:layout_height="200dp"
                     android:background="@drawable/radius_red">
 
                     <TextView
@@ -99,8 +99,8 @@
                         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
                     <ProgressBar
-                        android:layout_marginStart="15sp"
-                        android:layout_marginEnd="70sp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="70dp"
                         android:id="@+id/progressBar"
                         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                         android:layout_width="match_parent"
@@ -125,12 +125,12 @@
                         app:layout_constraintHorizontal_bias="0.35"
                         app:layout_constraintStart_toEndOf="@+id/progressBar"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="1.03" />
+                        app:layout_constraintVertical_bias="1.05" />
 
                     <com.airbnb.lottie.LottieAnimationView
                         android:id="@+id/lottieAnimationView"
                         android:layout_width="170sp"
-                        android:layout_height="170sp"
+                        android:layout_height="170dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
@@ -147,18 +147,18 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="800sp">
+                android:layout_height="800dp">
 
                 <LinearLayout
                     android:id="@+id/linearLayout6"
-                    android:layout_width="280sp"
-                    android:layout_height="80sp"
+                    android:layout_width="280dp"
+                    android:layout_height="80dp"
                     android:background="@drawable/radius_red"
                     android:gravity="center"
                     android:orientation="vertical"
                     app:layout_constraintBottom_toTopOf="@+id/linearLayout"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.9"
+                    app:layout_constraintHorizontal_bias="0.88"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.3">
@@ -177,8 +177,8 @@
 
                 <com.airbnb.lottie.LottieAnimationView
                     android:id="@+id/cat"
-                    android:layout_width="95sp"
-                    android:layout_height="75sp"
+                    android:layout_width="95dp"
+                    android:layout_height="75dp"
                     app:layout_constraintBottom_toBottomOf="@+id/linearLayout6"
                     app:layout_constraintEnd_toStartOf="@+id/linearLayout6"
                     app:layout_constraintHorizontal_bias="1.0"
@@ -198,16 +198,16 @@
                     android:textColor="@color/white"
                     android:textSize="26sp"
                     android:textStyle="bold"
-                    android:layout_marginTop="5sp"
+                    android:layout_marginTop="5dp"
                     app:layout_constraintBottom_toTopOf="@+id/linearLayout"
                     app:layout_constraintStart_toStartOf="@+id/linearLayout"
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
 
                 <LinearLayout
                     android:id="@+id/linearLayout"
-                    android:layout_width="165sp"
-                    android:layout_height="190sp"
-                    android:layout_marginTop="70sp"
+                    android:layout_width="165dp"
+                    android:layout_height="190dp"
+                    android:layout_marginTop="70dp"
                     android:background="@drawable/radius_red"
                     android:gravity="center"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -216,8 +216,8 @@
                     app:layout_constraintTop_toTopOf="@id/textView10">
 
                     <com.airbnb.lottie.LottieAnimationView
-                        android:layout_width="300sp"
-                        android:layout_height="300sp"
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"
                         app:lottie_autoPlay="true"
                         app:lottie_fileName="c.json"
                         app:lottie_url="@raw/c" />
@@ -228,7 +228,7 @@
                     android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10sp"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/cs_words"
                     android:textColor="@color/white"
                     android:textSize="18sp"
@@ -239,8 +239,8 @@
 
                 <LinearLayout
                     android:id="@+id/linearLayout2"
-                    android:layout_width="165sp"
-                    android:layout_height="190sp"
+                    android:layout_width="165dp"
+                    android:layout_height="190dp"
                     android:layout_marginTop="70sp"
                     android:background="@drawable/radius_red"
                     android:gravity="center"
@@ -250,8 +250,8 @@
                     app:layout_constraintTop_toTopOf="@id/textView10">
 
                     <com.airbnb.lottie.LottieAnimationView
-                        android:layout_width="300sp"
-                        android:layout_height="300sp"
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"
                         app:lottie_autoPlay="true"
                         app:lottie_fileName="b.json"
                         app:lottie_url="@raw/b" />
@@ -263,7 +263,7 @@
                     android:id="@+id/textView9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10sp"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/cs_study"
                     android:textColor="@color/white"
                     android:textSize="18sp"
@@ -275,9 +275,9 @@
 
                 <LinearLayout
                     android:id="@+id/linearLayout3"
-                    android:layout_width="165sp"
-                    android:layout_height="190sp"
-                    android:layout_marginTop="58sp"
+                    android:layout_width="165dp"
+                    android:layout_height="190dp"
+                    android:layout_marginTop="58dp"
                     android:background="@drawable/radius_red"
                     android:gravity="center"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -286,8 +286,8 @@
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
                     <com.airbnb.lottie.LottieAnimationView
-                        android:layout_width="200sp"
-                        android:layout_height="200sp"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
                         app:lottie_autoPlay="true"
                         app:lottie_fileName="a.json"
                         app:lottie_url="@raw/a" />
@@ -297,7 +297,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10sp"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/english_words"
                     android:textColor="@color/white"
                     android:textSize="18sp"
@@ -309,9 +309,9 @@
 
                 <LinearLayout
                     android:id="@+id/linearLayout5"
-                    android:layout_width="165sp"
-                    android:layout_height="190sp"
-                    android:layout_marginTop="58sp"
+                    android:layout_width="165dp"
+                    android:layout_height="190dp"
+                    android:layout_marginTop="58dp"
                     android:background="@drawable/radius_red"
                     android:gravity="center"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -320,9 +320,9 @@
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
                     <com.airbnb.lottie.LottieAnimationView
-                        android:layout_width="250sp"
-                        android:layout_height="250sp"
-                        android:layout_marginBottom="15sp"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:layout_marginBottom="15dp"
                         app:lottie_autoPlay="true"
                         app:lottie_fileName="quiz.json"
                         app:lottie_url="@raw/quiz" />
@@ -333,7 +333,7 @@
                     android:elevation="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10sp"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/english_study"
                     android:textColor="@color/white"
                     android:textSize="18sp"
@@ -355,13 +355,13 @@
         android:layout_gravity="bottom"
         android:background="@drawable/nav_background"
         android:layout_width="match_parent"
-        android:layout_height="70sp"
+        android:layout_height="70dp"
         android:baselineAligned="false">
 
 
         <LinearLayout
             android:id="@+id/home"
-            android:layout_marginBottom="10sp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -386,7 +386,7 @@
 
         <LinearLayout
             android:id="@+id/words"
-            android:layout_marginBottom="10sp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -410,7 +410,7 @@
 
         <LinearLayout
             android:id="@+id/learning"
-            android:layout_marginBottom="10sp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -434,7 +434,7 @@
 
         <LinearLayout
             android:id="@+id/setting"
-            android:layout_marginBottom="10sp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
