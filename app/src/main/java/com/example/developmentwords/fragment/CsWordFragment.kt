@@ -17,15 +17,15 @@ class CsWordFragment : Fragment() {
     private var _binding: FragmentCsWordBinding? = null
     private val binding get() = _binding!!
     private val csWords = listOf(
-        Word("네카라쿠베1"),
-        Word("네카라쿠베2"),
-        Word("네카라쿠베3"),
-        Word("네카라쿠베4"),
-        Word("네카라쿠베5"),
-        Word("네카라쿠베6"),
-        Word("네카라쿠베7"),
-        Word("네카라쿠베8"),
-        Word("네카라쿠베9"),
+        Word("네카라쿠베1","이것은 네카라쿠베1 설명입니다"),
+        Word("네카라쿠베2","이것은 네카라쿠베2 설명입니다"),
+        Word("네카라쿠베3","이것은 네카라쿠베3 설명입니다"),
+        Word("네카라쿠베4","이것은 네카라쿠베4 설명입니다"),
+        Word("네카라쿠베5","이것은 네카라쿠베5 설명입니다"),
+        Word("네카라쿠베6","이것은 네카라쿠베6 설명입니다"),
+        Word("네카라쿠베7","이것은 네카라쿠베7 설명입니다"),
+        Word("네카라쿠베8","이것은 네카라쿠베8 설명입니다"),
+        Word("네카라쿠베9","이것은 네카라쿠베9 설명입니다"),
         )
 
     override fun onCreate(savedInstanceState: Bundle?) {
