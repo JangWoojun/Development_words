@@ -7,6 +7,7 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
+        android:background="#ecec52"
         android:orientation="vertical"
         android:padding="20dp"
         android:layout_width="match_parent"
@@ -17,7 +18,7 @@
             android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="18sp"
-            android:text="네카라쿠배"
+            android:text="단어"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
