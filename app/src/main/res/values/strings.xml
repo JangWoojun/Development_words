@@ -24,4 +24,5 @@
     <string name="statText1">유저님의 스테이터스는\nCS Level%s / 영어 Level%s 입니다</string>
     <string name="list_item_text2">탭하여 설명보기</string>
     <string name="list_item_text3">탭하여 설명닫기</string>
+    <string name="shortcut">바로가기</string>
 </resources>
