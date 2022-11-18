@@ -47,6 +47,7 @@
                 android:layout_height="wrap_content"/>
 
             <TextView
+                android:id="@+id/list_item_text4"
                 android:layout_marginTop="10dp"
                 android:text="어쩌구 저쩌구 설명 설명 해당 단어를 설명합니다 단어를 설명하는 내용입니다"
                 android:textSize="15sp"
