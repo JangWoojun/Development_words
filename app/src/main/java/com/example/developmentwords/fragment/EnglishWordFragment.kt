@@ -1,6 +1,7 @@
 package com.example.developmentwords.fragment
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,10 +12,20 @@ import com.example.developmentwords.R
 import com.example.developmentwords.databinding.FragmentEnglishWordBinding
 import com.example.developmentwords.recyclerview.EnglishWordAdapter
 import com.example.developmentwords.recyclerview.Word
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 class EnglishWordFragment : Fragment() {
     private var _binding: FragmentEnglishWordBinding? = null
     private val binding get() = _binding!!
+    val TAG = "EnglishWordFragment"
+    private lateinit var auth: FirebaseAuth
+
     val list = listOf<Word>(
         Word("NCLCB1","This is NCLCB1 mean"),
         Word("NCLCB2","This is NCLCB2 mean"),
@@ -51,6 +62,23 @@ class EnglishWordFragment : Fragment() {
         binding.setting.setOnClickListener {
             it.findNavController().navigate(R.id.action_englishWordFragment_to_settingFragment)
         }
+
+        auth = Firebase.auth
+        val database = Firebase.database
+        val myRef = database.getReference("users").child(auth.currentUser?.uid.toString()).child("englishLevel")
+
+        myRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val value = dataSnapshot.value
+                binding.englishWordLv.text = getString(R.string.english_word_lv,value)
+
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException())
+            }
+        })
 
         initializeViews()
 
