@@ -22,7 +22,7 @@
         <LinearLayout
             android:id="@+id/linearLayout4"
             android:layout_width="match_parent"
-            android:layout_height="70sp"
+            android:layout_height="70dp"
             android:layout_gravity="bottom"
             android:background="@drawable/nav_background"
             android:baselineAligned="false"
@@ -37,7 +37,7 @@
                 android:id="@+id/home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10sp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 tools:ignore="UseCompoundDrawables">
@@ -62,7 +62,7 @@
                 android:id="@+id/words"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10sp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 tools:ignore="UseCompoundDrawables">
@@ -86,7 +86,7 @@
                 android:id="@+id/learning"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10sp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 tools:ignore="UseCompoundDrawables">
@@ -110,7 +110,7 @@
                 android:id="@+id/setting"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10sp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 tools:ignore="UseCompoundDrawables">
