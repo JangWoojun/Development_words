@@ -42,6 +42,7 @@ class EnglishWordAdapter (private val englishwords : List<Word>) :
         RecyclerView.ViewHolder(binding.root) {
             fun bind(englishword : Word){
                 binding.listItemText1.text = englishword.word
+                binding.listItemText4.text = englishword.mean
             }
         }
 
