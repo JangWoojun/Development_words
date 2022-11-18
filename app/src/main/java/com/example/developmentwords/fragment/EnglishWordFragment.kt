@@ -16,15 +16,15 @@ class EnglishWordFragment : Fragment() {
     private var _binding: FragmentEnglishWordBinding? = null
     private val binding get() = _binding!!
     val list = listOf<Word>(
-        Word("NCLCB1"),
-        Word("NCLCB2"),
-        Word("NCLCB3"),
-        Word("NCLCB4"),
-        Word("NCLCB5"),
-        Word("NCLCB6"),
-        Word("NCLCB7"),
-        Word("NCLCB8"),
-        Word("NCLCB9")
+        Word("NCLCB1","This is NCLCB1 mean"),
+        Word("NCLCB2","This is NCLCB2 mean"),
+        Word("NCLCB3","This is NCLCB3 mean"),
+        Word("NCLCB4","This is NCLCB4 mean"),
+        Word("NCLCB5","This is NCLCB5 mean"),
+        Word("NCLCB6","This is NCLCB6 mean"),
+        Word("NCLCB7","This is NCLCB7 mean"),
+        Word("NCLCB8","This is NCLCB8 mean"),
+        Word("NCLCB9","This is NCLCB9 mean")
 
         )
 
