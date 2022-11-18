@@ -151,7 +151,7 @@
 
                 <LinearLayout
                     android:id="@+id/linearLayout6"
-                    android:layout_width="280dp"
+                    android:layout_width="250dp"
                     android:layout_height="80dp"
                     android:background="@drawable/radius_red"
                     android:gravity="center"
@@ -181,7 +181,7 @@
                     android:layout_height="75dp"
                     app:layout_constraintBottom_toBottomOf="@+id/linearLayout6"
                     app:layout_constraintEnd_toStartOf="@+id/linearLayout6"
-                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintHorizontal_bias="0.8"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/linearLayout6"
                     app:layout_constraintVertical_bias="0.0"
