@@ -52,7 +52,7 @@ class MainFragment : Fragment() {
             }
         })
 
-
+        binding.home.setOnClickListener {  }
         binding.words.setOnClickListener{
             it.findNavController().navigate(R.id.action_mainFragment_to_wordFragment)
         }
