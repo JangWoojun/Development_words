@@ -3,10 +3,11 @@ package com.example.developmentwords.fragment
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.navigation.findNavController
 import com.example.developmentwords.R
 import com.example.developmentwords.databinding.FragmentMainBinding
@@ -14,7 +15,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
-import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 
 class MainFragment : Fragment() {
@@ -36,21 +36,14 @@ class MainFragment : Fragment() {
         val database = Firebase.database
         val myRef = database.getReference("users").child(auth.currentUser?.uid.toString())
 
-        myRef.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                val value : HashMap<String, Long> = dataSnapshot.value as HashMap<String, Long>
+        myRef.get().addOnSuccessListener {
+            val value : HashMap<String, Long> = it.value as HashMap<String, Long>
 
-                val csLevel = value["csLevel"]
-                val englishLevel = value["englishLevel"]
+            val csLevel = value["csLevel"]
+            val englishLevel = value["englishLevel"]
 
-                binding.statText.text = getString(R.string.statText1,csLevel.toString(),englishLevel.toString())
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                // Failed to read value
-                Log.w(TAG, "Failed to read value.", error.toException())
-            }
-        })
+            binding.statText.text = getString(R.string.statText1,csLevel.toString(),englishLevel.toString())
+        }
 
         binding.home.setOnClickListener {  }
         binding.words.setOnClickListener{
