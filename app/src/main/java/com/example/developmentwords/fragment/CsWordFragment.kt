@@ -57,16 +57,13 @@ class CsWordFragment : Fragment() {
         val database = Firebase.database
         val levelRef = database.getReference("users").child(auth.currentUser?.uid.toString()).child("csLevel")
 
-        levelRef.addValueEventListener(object : ValueEventListener {
-
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                val value = dataSnapshot.value
+        levelRef.get().addOnSuccessListener {
+                val value = it.value
                 binding.csWordLv.text = getString(R.string.cs_word_lv,value)
                 val wordRef = database.getReference("csWord").child("lv"+value.toString())
 
-                wordRef.addValueEventListener(object : ValueEventListener {
-                    override fun onDataChange(dataSnapshot: DataSnapshot) {
-                        val value : ArrayList<Any> = dataSnapshot.value as ArrayList<Any>
+                wordRef.get().addOnSuccessListener { it ->
+                    val value : ArrayList<Any> = it.value as ArrayList<Any>
                         for (i in 1..15){
                             val valueMap: HashMap<String,String> = value[i] as HashMap<String, String>
 
@@ -75,18 +72,8 @@ class CsWordFragment : Fragment() {
                         binding.list.adapter?.notifyDataSetChanged()
                     }
 
-                    override fun onCancelled(error: DatabaseError) {
-                        // Failed to read value
-                        Log.w(TAG, "Failed to read value.", error.toException())
-                    }
-                })
             }
-
-            override fun onCancelled(error: DatabaseError) {
-                // Failed to read value
-                Log.w(TAG, "Failed to read value.", error.toException())
-            }
-        })
+        
 
         initializeViews()
 
