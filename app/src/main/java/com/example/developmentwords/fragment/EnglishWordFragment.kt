@@ -55,38 +55,37 @@ class EnglishWordFragment : Fragment() {
         auth = Firebase.auth
         val database = Firebase.database
         val levelRef = database.getReference("users").child(auth.currentUser?.uid.toString()).child("englishLevel")
-        val wordRef = database.getReference("englishWord").child("lv1")
 
         levelRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 val value = dataSnapshot.value
                 binding.englishWordLv.text = getString(R.string.english_word_lv,value)
+                val wordRef = database.getReference("englishWord").child("lv"+value.toString())
+
+                wordRef.addValueEventListener(object : ValueEventListener {
+                    override fun onDataChange(dataSnapshot: DataSnapshot) {
+                        val value : ArrayList<Any> = dataSnapshot.value as ArrayList<Any>
+                        for (i in 1..15){
+                            val valueMap: HashMap<String,String> = value[i] as HashMap<String, String>
+
+                            englishWords.add(Word(valueMap["word"]!!.toString(),valueMap["mean"]!!.toString()))
+                        }
+                        binding.list.adapter?.notifyDataSetChanged()
+                    }
+
+                    override fun onCancelled(error: DatabaseError) {
+                        // Failed to read value
+                        Log.w(TAG, "Failed to read value.", error.toException())
+                    }
+                })
 
             }
-
-
             override fun onCancelled(error: DatabaseError) {
                 // Failed to read value
                 Log.w(TAG, "Failed to read value.", error.toException())
             }
         })
 
-        wordRef.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                val value : ArrayList<Any> = dataSnapshot.value as ArrayList<Any>
-                for (i in 1..15){
-                    val valueMap: HashMap<String,String> = value[i] as HashMap<String, String>
-
-                    englishWords.add(Word(valueMap["word"]!!.toString(),valueMap["mean"]!!.toString()))
-                }
-                binding.list.adapter?.notifyDataSetChanged()
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                // Failed to read value
-                Log.w(TAG, "Failed to read value.", error.toException())
-            }
-        })
 
         initializeViews()
 
