@@ -26,18 +26,8 @@ class EnglishWordFragment : Fragment() {
     val TAG = "EnglishWordFragment"
     private lateinit var auth: FirebaseAuth
 
-    val list = listOf<Word>(
-        Word("NCLCB1","This is NCLCB1 mean"),
-        Word("NCLCB2","This is NCLCB2 mean"),
-        Word("NCLCB3","This is NCLCB3 mean"),
-        Word("NCLCB4","This is NCLCB4 mean"),
-        Word("NCLCB5","This is NCLCB5 mean"),
-        Word("NCLCB6","This is NCLCB6 mean"),
-        Word("NCLCB7","This is NCLCB7 mean"),
-        Word("NCLCB8","This is NCLCB8 mean"),
-        Word("NCLCB9","This is NCLCB9 mean")
+    private val englishWords = ArrayList<Word>()
 
-        )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,13 +55,31 @@ class EnglishWordFragment : Fragment() {
 
         auth = Firebase.auth
         val database = Firebase.database
-        val myRef = database.getReference("users").child(auth.currentUser?.uid.toString()).child("englishLevel")
+        val levelRef = database.getReference("users").child(auth.currentUser?.uid.toString()).child("csLevel")
+        val wordRef = database.getReference("englishWord").child("lv1")
 
-        myRef.addValueEventListener(object : ValueEventListener {
+        levelRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 val value = dataSnapshot.value
                 binding.englishWordLv.text = getString(R.string.english_word_lv,value)
 
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException())
+            }
+        })
+
+        wordRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val value : ArrayList<Any> = dataSnapshot.value as ArrayList<Any>
+                for (i in 1..15){
+                    val valueMap: HashMap<String,String> = value[i] as HashMap<String, String>
+
+                    englishWords.add(Word(valueMap["word"]!!.toString(),valueMap["mean"]!!.toString()))
+                }
+                binding.list.adapter?.notifyDataSetChanged()
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -91,6 +99,6 @@ class EnglishWordFragment : Fragment() {
     }
     private fun initializeViews() {
         binding.list.layoutManager = LinearLayoutManager(context)
-        binding.list.adapter = EnglishWordAdapter(list)
+        binding.list.adapter = EnglishWordAdapter(englishWords)
     }
 }
