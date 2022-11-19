@@ -26,17 +26,8 @@ class CsWordFragment : Fragment() {
     private var _binding: FragmentCsWordBinding? = null
     private val binding get() = _binding!!
     val TAG = "CsWordFragment"
-    private val csWords = listOf(
-        Word("네카라쿠베1","이것은 네카라쿠베1 설명입니다"),
-        Word("네카라쿠베2","이것은 네카라쿠베2 설명입니다"),
-        Word("네카라쿠베3","이것은 네카라쿠베3 설명입니다"),
-        Word("네카라쿠베4","이것은 네카라쿠베4 설명입니다"),
-        Word("네카라쿠베5","이것은 네카라쿠베5 설명입니다"),
-        Word("네카라쿠베6","이것은 네카라쿠베6 설명입니다"),
-        Word("네카라쿠베7","이것은 네카라쿠베7 설명입니다"),
-        Word("네카라쿠베8","이것은 네카라쿠베8 설명입니다"),
-        Word("네카라쿠베9","이것은 네카라쿠베9 설명입니다"),
-        )
+    private val csWords = ArrayList<Word>()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,13 +55,31 @@ class CsWordFragment : Fragment() {
 
         auth = Firebase.auth
         val database = Firebase.database
-        val myRef = database.getReference("users").child(auth.currentUser?.uid.toString()).child("csLevel")
+        val levelRef = database.getReference("users").child(auth.currentUser?.uid.toString()).child("csLevel")
+        val wordRef = database.getReference("csWord").child("lv1")
 
-        myRef.addValueEventListener(object : ValueEventListener {
+        levelRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 val value = dataSnapshot.value
                 binding.csWordLv.text = getString(R.string.cs_word_lv,value)
 
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException())
+            }
+        })
+
+        wordRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val value : ArrayList<Any> = dataSnapshot.value as ArrayList<Any>
+                for (i in 1..15){
+                    val valueMap: HashMap<String,String> = value[i] as HashMap<String, String>
+
+                    csWords.add(Word(valueMap["word"]!!.toString(),valueMap["mean"]!!.toString()))
+                }
+                binding.list.adapter?.notifyDataSetChanged()
             }
 
             override fun onCancelled(error: DatabaseError) {
