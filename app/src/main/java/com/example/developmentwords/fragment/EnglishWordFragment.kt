@@ -25,7 +25,6 @@ class EnglishWordFragment : Fragment() {
     private val binding get() = _binding!!
     val TAG = "EnglishWordFragment"
     private lateinit var auth: FirebaseAuth
-
     private val englishWords = ArrayList<Word>()
 
 
@@ -55,7 +54,7 @@ class EnglishWordFragment : Fragment() {
 
         auth = Firebase.auth
         val database = Firebase.database
-        val levelRef = database.getReference("users").child(auth.currentUser?.uid.toString()).child("csLevel")
+        val levelRef = database.getReference("users").child(auth.currentUser?.uid.toString()).child("englishLevel")
         val wordRef = database.getReference("englishWord").child("lv1")
 
         levelRef.addValueEventListener(object : ValueEventListener {
@@ -64,6 +63,7 @@ class EnglishWordFragment : Fragment() {
                 binding.englishWordLv.text = getString(R.string.english_word_lv,value)
 
             }
+
 
             override fun onCancelled(error: DatabaseError) {
                 // Failed to read value
