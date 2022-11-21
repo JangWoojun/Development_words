@@ -38,7 +38,30 @@ class EnglishStudyFragment : Fragment() {
 
         var chk = 0
 
+        binding.ok.setOnClickListener {
+            if (i<15){
+                i++
+                get(i)
+                binding.message.text = getString(R.string.good)
+                binding.message.visibility = View.VISIBLE
+                val fadeOut = ObjectAnimator.ofFloat(binding.message, "alpha", 1f, 0f)
+                fadeOut.duration = 1500
+                fadeOut.start()
+            }
+        }
 
+        binding.no.setOnClickListener {
+            if (i<15){
+                i++
+                get(i)
+                chk++
+                binding.message.text = getString(R.string.bad)
+                binding.message.visibility = View.VISIBLE
+                val fadeOut = ObjectAnimator.ofFloat(binding.message, "alpha", 1f, 0f)
+                fadeOut.duration = 1500
+                fadeOut.start()
+            }
+        }
 
         return binding.root
     }
