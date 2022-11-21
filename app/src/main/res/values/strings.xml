@@ -27,5 +27,7 @@
     <string name="shortcut">바로가기</string>
     <string name="cs_word_lv">CS 단어장 Lv.%s</string>
     <string name="english_word_lv">영어 단어장 Lv.%s</string>
+    <string name="good">Good 👍</string>
+    <string name="bad">Cheer up 💪</string>
 
 </resources>
