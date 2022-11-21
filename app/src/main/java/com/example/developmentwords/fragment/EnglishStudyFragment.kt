@@ -1,7 +1,9 @@
 package com.example.developmentwords.fragment
 
 import android.animation.ObjectAnimator
+import android.content.Context
 import android.os.Bundle
+import android.os.Vibrator
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -47,6 +49,8 @@ class EnglishStudyFragment : Fragment() {
                 val fadeOut = ObjectAnimator.ofFloat(binding.message, "alpha", 1f, 0f)
                 fadeOut.duration = 1500
                 fadeOut.start()
+                val vibe = requireActivity().getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+                vibe.vibrate(50)
             }
         }
 
@@ -60,6 +64,8 @@ class EnglishStudyFragment : Fragment() {
                 val fadeOut = ObjectAnimator.ofFloat(binding.message, "alpha", 1f, 0f)
                 fadeOut.duration = 1500
                 fadeOut.start()
+                val vibe = requireActivity().getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+                vibe.vibrate(50)
             }
         }
 
