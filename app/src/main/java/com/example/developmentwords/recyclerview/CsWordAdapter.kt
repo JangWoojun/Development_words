@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.developmentwords.databinding.ListItemBinding
 
+private var chkWord : String = ""
+
 class CsWordAdapter(private val cswords : List<Word>) : RecyclerView.Adapter<CsWordAdapter.CsWordViewHolder>() {
-
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CsWordViewHolder {
         val binding = ListItemBinding.inflate(
@@ -27,7 +27,7 @@ class CsWordAdapter(private val cswords : List<Word>) : RecyclerView.Adapter<CsW
                     binding.listItemText2.visibility = View.VISIBLE
                     binding.listItemText3.visibility = View.GONE
                 }
-
+                chkWord = binding.listItemText1.text as String
             }
         }
     }
@@ -44,6 +44,14 @@ class CsWordAdapter(private val cswords : List<Word>) : RecyclerView.Adapter<CsW
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(csword : Word) {
+            if (csword.word == chkWord){
+                binding.listItemText2.visibility = View.GONE
+                binding.listItemText3.visibility = View.VISIBLE
+            }
+            else {
+                binding.listItemText2.visibility = View.VISIBLE
+                binding.listItemText3.visibility = View.GONE
+            }
             binding.listItemText1.text = csword.word
             binding.listItemText4.text = csword.mean
         }
