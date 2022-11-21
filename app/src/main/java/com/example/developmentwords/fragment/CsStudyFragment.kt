@@ -50,7 +50,8 @@ class CsStudyFragment : Fragment() {
                 fadeOut.duration = 1500
                 fadeOut.start()
 
-
+                val vibe = requireActivity().getSystemService(VIBRATOR_SERVICE) as Vibrator
+                vibe.vibrate(50)
 
             }
         }
@@ -66,7 +67,8 @@ class CsStudyFragment : Fragment() {
                 fadeOut.duration = 1500
                 fadeOut.start()
 
-
+                val vibe = requireActivity().getSystemService(VIBRATOR_SERVICE) as Vibrator
+                vibe.vibrate(50)
 
             }
         }
