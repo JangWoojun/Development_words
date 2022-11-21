@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.developmentwords.databinding.ListItemBinding
 
+private var chkWord: String = ""
+
 class EnglishWordAdapter (private val englishwords : List<Word>) :
     RecyclerView.Adapter<EnglishWordAdapter.EnglishWordViewHolder>() {
 
@@ -26,6 +28,7 @@ class EnglishWordAdapter (private val englishwords : List<Word>) :
                     binding.listItemText3.visibility = View.GONE
                 }
 
+                chkWord = binding.listItemText1.text as String
             }
         }
     }
@@ -40,7 +43,16 @@ class EnglishWordAdapter (private val englishwords : List<Word>) :
 
     class EnglishWordViewHolder(private val binding: ListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-            fun bind(englishword : Word){
+
+        fun bind(englishword : Word){
+                if (englishword.word == chkWord) {
+                    binding.listItemText2.visibility = View.GONE
+                    binding.listItemText3.visibility = View.VISIBLE
+                }
+                else {
+                    binding.listItemText2.visibility = View.VISIBLE
+                    binding.listItemText3.visibility = View.GONE
+                }
                 binding.listItemText1.text = englishword.word
                 binding.listItemText4.text = englishword.mean
             }
