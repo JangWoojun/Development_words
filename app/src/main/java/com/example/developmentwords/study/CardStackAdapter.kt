@@ -20,10 +20,12 @@ class CardStackAdapter(private val items:List<Voca>) :
                 if (binding.wordText.visibility == View.VISIBLE){
                     binding.wordText.visibility = View.INVISIBLE
                     binding.meanText.visibility = View.VISIBLE
+                    binding.touchText.text = "터치하여 단어 확인"
                 }
                 else {
                     binding.wordText.visibility = View.VISIBLE
                     binding.meanText.visibility = View.INVISIBLE
+                    binding.touchText.text = "터치하여 뜻 확인"
                 }
             }
         }
