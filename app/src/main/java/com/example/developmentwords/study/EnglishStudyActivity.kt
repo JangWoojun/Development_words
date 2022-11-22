@@ -1,7 +1,10 @@
 package com.example.developmentwords.study
 
+import android.animation.ObjectAnimator
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Vibrator
 import android.util.Log
 import android.view.View
 import com.example.developmentwords.R
@@ -11,9 +14,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
-import com.yuyakaido.android.cardstackview.CardStackLayoutManager
-import com.yuyakaido.android.cardstackview.CardStackListener
-import com.yuyakaido.android.cardstackview.Direction
+import com.yuyakaido.android.cardstackview.*
 
 class EnglishStudyActivity : AppCompatActivity() {
     private lateinit var binding: ActivityEnglishStudyBinding
@@ -34,6 +35,24 @@ class EnglishStudyActivity : AppCompatActivity() {
             }
 
             override fun onCardSwiped(direction: Direction?) {
+                if (direction == Direction.Left){
+                    binding.message.text = getString(R.string.bad)
+                    binding.message.visibility = View.VISIBLE
+                    val fadeOut = ObjectAnimator.ofFloat(binding.message, "alpha", 1f, 0f)
+                    fadeOut.duration = 1500
+                    fadeOut.start()
+                    val vibe = getSystemService(VIBRATOR_SERVICE) as Vibrator
+                    vibe.vibrate(50)
+                }
+                else if (direction == Direction.Right){
+                    binding.message.text = getString(com.example.developmentwords.R.string.good)
+                    binding.message.visibility = View.VISIBLE
+                    val fadeOut = ObjectAnimator.ofFloat(binding.message, "alpha", 1f, 0f)
+                    fadeOut.duration = 1500
+                    fadeOut.start()
+                    val vibe = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+                    vibe.vibrate(50)
+                }
             }
 
             override fun onCardRewound() {
@@ -55,6 +74,16 @@ class EnglishStudyActivity : AppCompatActivity() {
         binding.cardStackView.adapter = cardStackAdapter
 
         get()
+
+        manager.setStackFrom(StackFrom.Bottom)
+        manager.setSwipeThreshold(0.2f)
+
+        cardStackAdapter = CardStackAdapter(list)
+        binding.cardStackView.layoutManager = manager
+        binding.cardStackView.adapter = cardStackAdapter
+
+        get()
+
     }
     fun get(){
         val database = Firebase.database
