@@ -1,5 +1,6 @@
 package com.example.developmentwords.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +9,8 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.example.developmentwords.R
 import com.example.developmentwords.databinding.FragmentStudyBinding
+import com.example.developmentwords.study.CsStudyActivity
+import com.example.developmentwords.study.EnglishStudyActivity
 
 
 class StudyFragment : Fragment() {
@@ -36,10 +39,12 @@ class StudyFragment : Fragment() {
         }
 
         binding.linearLayout1.setOnClickListener {
-            it.findNavController().navigate(R.id.action_studyFragment_to_csStudyFragment)
+            val intent = Intent(context,CsStudyActivity::class.java)
+            startActivity(intent)
         }
         binding.linearLayout2.setOnClickListener {
-            it.findNavController().navigate(R.id.action_studyFragment_to_englishStudyFragment)
+            val intent = Intent(context,EnglishStudyActivity::class.java)
+            startActivity(intent)
         }
 
 
