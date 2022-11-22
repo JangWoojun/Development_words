@@ -3,18 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="30dp">
+    app:cardCornerRadius="30dp"
+    android:id="@+id/cardItem">
 
-        <TextView
-            android:textSize="16sp"
-            android:id="@+id/message"
-            android:visibility="invisible"
-            android:layout_margin="35dp"
-            android:layout_gravity="right"
-            android:textStyle="bold"
-            android:text="@string/good"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
 
         <TextView
             android:id="@+id/wordText"
@@ -28,11 +19,10 @@
 
         <TextView
             android:visibility="invisible"
-            android:layout_margin="35dp"
+            android:layout_margin="20dp"
             android:gravity="center"
             android:id="@+id/meanText"
-            android:textSize="22sp"
-            android:textColor="@color/black"
+            android:textSize="16sp"
             android:text="@string/statText"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
@@ -46,12 +36,13 @@
             android:layout_height="50dp"/>
 
         <TextView
+            android:id="@+id/touchText"
             android:textColor="#c8c8c8"
             android:textStyle="bold"
             android:textSize="16sp"
             android:layout_marginTop="185dp"
             android:layout_gravity="center"
-            android:text="터치하여 뜻 확인"
+            android:text="@string/touch1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
