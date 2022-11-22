@@ -1,16 +1,17 @@
 package com.example.developmentwords.fragment
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import androidx.navigation.findNavController
 import com.example.developmentwords.R
 import com.example.developmentwords.databinding.FragmentMainBinding
+import com.example.developmentwords.study.CsStudyActivity
+import com.example.developmentwords.study.EnglishStudyActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
@@ -63,10 +64,12 @@ class MainFragment : Fragment() {
             it.findNavController().navigate(R.id.action_mainFragment_to_englishWordFragment)
         }
         binding.linearLayout2.setOnClickListener {
-            it.findNavController().navigate(R.id.action_mainFragment_to_csStudyFragment)
+            val intent = Intent(context, CsStudyActivity::class.java)
+            startActivity(intent)
         }
         binding.linearLayout5.setOnClickListener {
-            it.findNavController().navigate(R.id.action_mainFragment_to_englishStudyFragment)
+            val intent = Intent(context,EnglishStudyActivity::class.java)
+            startActivity(intent)
         }
 
         return binding.root
