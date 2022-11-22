@@ -84,6 +84,22 @@ class EnglishStudyActivity : AppCompatActivity() {
 
         get()
 
+        binding.no.setOnClickListener {
+            val setting1 = SwipeAnimationSetting.Builder()
+                .setDirection(Direction.Left)
+                .build()
+            manager.setSwipeAnimationSetting(setting1)
+            binding.cardStackView.swipe()
+        }
+        binding.ok.setOnClickListener{
+            val setting2 = SwipeAnimationSetting.Builder()
+                .setDirection(Direction.Right)
+                .build()
+            manager.setSwipeAnimationSetting(setting2)
+            binding.cardStackView.swipe()
+            binding.cardStackView.swipe()
+        }
+
     }
     fun get(){
         val database = Firebase.database
