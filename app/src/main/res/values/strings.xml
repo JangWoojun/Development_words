@@ -29,5 +29,6 @@
     <string name="english_word_lv">영어 단어장 Lv.%s</string>
     <string name="good">Good 👍</string>
     <string name="bad">Cheer up 💪</string>
+    <string name="touch1">터치하여 뜻 확인</string>
 
 </resources>
