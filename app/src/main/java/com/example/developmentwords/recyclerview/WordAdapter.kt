@@ -8,15 +8,15 @@ import com.example.developmentwords.databinding.ListItemBinding
 
 private var chkWord: String = ""
 
-class EnglishWordAdapter (private val englishwords : List<Word>) :
-    RecyclerView.Adapter<EnglishWordAdapter.EnglishWordViewHolder>() {
+class WordAdapter (private val words : List<Voca>) :
+    RecyclerView.Adapter<WordAdapter.WordViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EnglishWordViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WordViewHolder {
         val binding = ListItemBinding.inflate(
             LayoutInflater.from(parent.context),
             parent, false
         )
-        return EnglishWordViewHolder(binding).also {
+        return WordViewHolder(binding).also {
 
             binding.wordBox.setOnClickListener {
                 if (binding.listItemText2.visibility == View.VISIBLE){
@@ -33,18 +33,18 @@ class EnglishWordAdapter (private val englishwords : List<Word>) :
         }
     }
 
-    override fun onBindViewHolder(holder: EnglishWordViewHolder, position: Int) {
-        holder.bind(englishwords[position])
+    override fun onBindViewHolder(holder: WordViewHolder, position: Int) {
+        holder.bind(words[position])
     }
 
     override fun getItemCount(): Int {
-        return englishwords.size
+        return words.size
     }
 
-    class EnglishWordViewHolder(private val binding: ListItemBinding) :
+    class WordViewHolder(private val binding: ListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(englishword : Word){
+        fun bind(englishword : Voca){
                 if (englishword.word == chkWord) {
                     binding.listItemText2.visibility = View.GONE
                     binding.listItemText3.visibility = View.VISIBLE
