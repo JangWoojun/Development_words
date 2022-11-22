@@ -169,7 +169,6 @@
     </fragment>
     <fragment
         android:id="@+id/csStudyFragment"
-        android:name="com.example.developmentwords.fragment.CsStudyFragment"
         android:label="fragment_cs_study"
         tools:layout="@layout/fragment_cs_study" >
         <action
@@ -196,7 +195,6 @@
     </fragment>
     <fragment
         android:id="@+id/englishStudyFragment"
-        android:name="com.example.developmentwords.fragment.EnglishStudyFragment"
         android:label="fragment_english_study"
         tools:layout="@layout/fragment_english_study" >
         <action
