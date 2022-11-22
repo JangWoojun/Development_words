@@ -3,7 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_cs_study.xml" value="0.2557291666666667" />
+        <entry key="app/src/main/res/drawable/learning_f.xml" value="0.23425925925925925" />
+        <entry key="app/src/main/res/drawable/nav_background.xml" value="0.23425925925925925" />
+        <entry key="app/src/main/res/drawable/radius_red.xml" value="0.23425925925925925" />
+        <entry key="app/src/main/res/drawable/radius_white.xml" value="0.23425925925925925" />
+        <entry key="app/src/main/res/drawable/raidus_gray.xml" value="0.23425925925925925" />
+        <entry key="app/src/main/res/layout/activity_cs_study.xml" value="0.2291045356380251" />
+        <entry key="app/src/main/res/layout/activity_english_study.xml" value="0.2833333333333333" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.2833333333333333" />
+        <entry key="app/src/main/res/layout/card_item.xml" value="0.2833333333333333" />
+        <entry key="app/src/main/res/layout/fragment_cs_study.xml" value="0.2833333333333333" />
+        <entry key="app/src/main/res/layout/fragment_english_word.xml" value="0.2833333333333333" />
+        <entry key="app/src/main/res/layout/fragment_main.xml" value="0.2833333333333333" />
+        <entry key="app/src/main/res/layout/fragment_setting.xml" value="0.2833333333333333" />
       </map>
     </option>
   </component>
