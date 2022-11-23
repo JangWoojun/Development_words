@@ -30,5 +30,9 @@
     <string name="good">Good 👍</string>
     <string name="bad">Cheer up 💪</string>
     <string name="touch1">터치하여 뜻 확인</string>
-
+    <string name="result_text1">암기완료</string>
+    <string name="result_text2">미암기</string>
+    <string name="result_text3">단어 암기율</string>
+    <string name="result_text4">%s/15</string>
+    <string name="result_text5">%s/15</string>
 </resources>
