@@ -2,11 +2,14 @@ package com.example.developmentwords.study
 
 import android.animation.ObjectAnimator
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.os.Vibrator
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.developmentwords.MainActivity
 import com.example.developmentwords.R
 import com.example.developmentwords.databinding.ActivityCsStudyBinding
 import com.example.developmentwords.recyclerview.Voca
@@ -23,6 +26,9 @@ class CsStudyActivity : AppCompatActivity() {
     lateinit var manager: CardStackLayoutManager
     private val list = mutableListOf<Voca>()
     private lateinit var auth: FirebaseAuth
+    private var count = 0
+    var o = 0
+    var x = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +42,7 @@ class CsStudyActivity : AppCompatActivity() {
 
             override fun onCardSwiped(direction: Direction?) {
                 if (direction == Direction.Left){
+                    ++x
                     binding.message.text = getString(R.string.bad)
                     binding.message.visibility = View.VISIBLE
                     val fadeOut = ObjectAnimator.ofFloat(binding.message, "alpha", 1f, 0f)
@@ -43,8 +50,11 @@ class CsStudyActivity : AppCompatActivity() {
                     fadeOut.start()
                     val vibe = getSystemService(VIBRATOR_SERVICE) as Vibrator
                     vibe.vibrate(50)
+                    ++count
+                    Log.d("확인",count.toString())
                 }
-                else if (direction == Direction.Right){
+                else {
+                    ++o
                     binding.message.text = getString(com.example.developmentwords.R.string.good)
                     binding.message.visibility = View.VISIBLE
                     val fadeOut = ObjectAnimator.ofFloat(binding.message, "alpha", 1f, 0f)
@@ -52,6 +62,15 @@ class CsStudyActivity : AppCompatActivity() {
                     fadeOut.start()
                     val vibe = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
                     vibe.vibrate(50)
+                    ++count
+                    Log.d("확인",count.toString())
+                }
+                if (count==15){
+                    val intent = Intent(this@CsStudyActivity,ResultActivity::class.java)
+                    intent.putExtra("o",o.toString())
+                    intent.putExtra("x",x.toString())
+                    startActivity(intent)
+                    finish()
                 }
             }
 
