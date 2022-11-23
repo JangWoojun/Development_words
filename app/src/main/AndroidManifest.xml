@@ -15,6 +15,13 @@
         android:theme="@style/Theme.DevelopmentWords"
         tools:targetApi="31">
         <activity
+            android:name=".ResultActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".study.EnglishStudyActivity"
             android:exported="false">
             <meta-data
