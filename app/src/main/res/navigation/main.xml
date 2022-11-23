@@ -25,12 +25,6 @@
         <action
             android:id="@+id/action_wordFragment_to_englishWordFragment"
             app:destination="@id/englishWordFragment" />
-        <action
-            android:id="@+id/action_wordFragment_to_englishStudyFragment"
-            app:destination="@id/englishStudyFragment" />
-        <action
-            android:id="@+id/action_wordFragment_to_csStudyFragment"
-            app:destination="@id/csStudyFragment" />
     </fragment>
     <fragment
         android:id="@+id/studyFragment"
@@ -52,12 +46,6 @@
         <action
             android:id="@+id/action_studyFragment_to_englishWordFragment"
             app:destination="@id/englishWordFragment" />
-        <action
-            android:id="@+id/action_studyFragment_to_englishStudyFragment"
-            app:destination="@id/englishStudyFragment" />
-        <action
-            android:id="@+id/action_studyFragment_to_csStudyFragment"
-            app:destination="@id/csStudyFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingFragment"
@@ -79,12 +67,6 @@
         <action
             android:id="@+id/action_settingFragment_to_englishWordFragment"
             app:destination="@id/englishWordFragment" />
-        <action
-            android:id="@+id/action_settingFragment_to_englishStudyFragment"
-            app:destination="@id/englishStudyFragment" />
-        <action
-            android:id="@+id/action_settingFragment_to_csStudyFragment"
-            app:destination="@id/csStudyFragment" />
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
@@ -106,12 +88,6 @@
         <action
             android:id="@+id/action_mainFragment_to_englishWordFragment"
             app:destination="@id/englishWordFragment" />
-        <action
-            android:id="@+id/action_mainFragment_to_englishStudyFragment"
-            app:destination="@id/englishStudyFragment" />
-        <action
-            android:id="@+id/action_mainFragment_to_csStudyFragment"
-            app:destination="@id/csStudyFragment" />
     </fragment>
     <fragment
         android:id="@+id/csWordFragment"
@@ -133,12 +109,6 @@
         <action
             android:id="@+id/action_csWordFragment_to_englishWordFragment"
             app:destination="@id/englishWordFragment" />
-        <action
-            android:id="@+id/action_csWordFragment_to_csStudyFragment"
-            app:destination="@id/csStudyFragment" />
-        <action
-            android:id="@+id/action_csWordFragment_to_englishStudyFragment"
-            app:destination="@id/englishStudyFragment" />
     </fragment>
     <fragment
         android:id="@+id/englishWordFragment"
@@ -159,64 +129,6 @@
             app:destination="@id/studyFragment" />
         <action
             android:id="@+id/action_englishWordFragment_to_settingFragment"
-            app:destination="@id/settingFragment" />
-        <action
-            android:id="@+id/action_englishWordFragment_to_englishStudyFragment"
-            app:destination="@id/englishStudyFragment" />
-        <action
-            android:id="@+id/action_englishWordFragment_to_csStudyFragment"
-            app:destination="@id/csStudyFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/csStudyFragment"
-        android:label="fragment_cs_study"
-        tools:layout="@layout/fragment_cs_study" >
-        <action
-            android:id="@+id/action_csStudyFragment_to_englishWordFragment"
-            app:destination="@id/englishWordFragment" />
-        <action
-            android:id="@+id/action_csStudyFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
-        <action
-            android:id="@+id/action_csStudyFragment_to_studyFragment"
-            app:destination="@id/studyFragment" />
-        <action
-            android:id="@+id/action_csStudyFragment_to_wordFragment"
-            app:destination="@id/wordFragment" />
-        <action
-            android:id="@+id/action_csStudyFragment_to_settingFragment"
-            app:destination="@id/settingFragment" />
-        <action
-            android:id="@+id/action_csStudyFragment_to_englishStudyFragment"
-            app:destination="@id/englishStudyFragment" />
-        <action
-            android:id="@+id/action_csStudyFragment_to_csWordFragment"
-            app:destination="@id/csWordFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/englishStudyFragment"
-        android:label="fragment_english_study"
-        tools:layout="@layout/fragment_english_study" >
-        <action
-            android:id="@+id/action_englishStudyFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
-        <action
-            android:id="@+id/action_englishStudyFragment_to_csStudyFragment"
-            app:destination="@id/csStudyFragment" />
-        <action
-            android:id="@+id/action_englishStudyFragment_to_englishWordFragment"
-            app:destination="@id/englishWordFragment" />
-        <action
-            android:id="@+id/action_englishStudyFragment_to_csWordFragment"
-            app:destination="@id/csWordFragment" />
-        <action
-            android:id="@+id/action_englishStudyFragment_to_wordFragment"
-            app:destination="@id/wordFragment" />
-        <action
-            android:id="@+id/action_englishStudyFragment_to_studyFragment"
-            app:destination="@id/studyFragment" />
-        <action
-            android:id="@+id/action_englishStudyFragment_to_settingFragment"
             app:destination="@id/settingFragment" />
     </fragment>
 </navigation>
