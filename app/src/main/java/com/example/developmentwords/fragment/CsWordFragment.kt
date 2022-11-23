@@ -1,5 +1,6 @@
 package com.example.developmentwords.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.developmentwords.R
 import com.example.developmentwords.databinding.FragmentCsWordBinding
+import com.example.developmentwords.quiz.QuizActivity
 import com.example.developmentwords.recyclerview.Voca
 import com.example.developmentwords.recyclerview.WordAdapter
 import com.google.firebase.auth.FirebaseAuth
@@ -49,8 +51,14 @@ class CsWordFragment : Fragment() {
             it.findNavController().navigate(R.id.action_csWordFragment_to_settingFragment)
         }
 
+        binding.levelUp.setOnClickListener {
+            val intent = Intent(context, QuizActivity::class.java)
+            startActivity(intent)
+            intent.putExtra("type","cs")
+            activity?.finish()
+        }
 
-        
+
         firebase()
         initializeViews()
 
