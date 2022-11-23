@@ -66,10 +66,12 @@ class MainFragment : Fragment() {
         binding.linearLayout2.setOnClickListener {
             val intent = Intent(context, CsStudyActivity::class.java)
             startActivity(intent)
+            activity?.finish()
         }
         binding.linearLayout5.setOnClickListener {
             val intent = Intent(context,EnglishStudyActivity::class.java)
             startActivity(intent)
+            activity?.finish()
         }
 
         return binding.root
