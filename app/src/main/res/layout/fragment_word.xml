@@ -21,15 +21,15 @@
             android:layout_marginTop="36dp"
             android:text="@string/words"
             android:textColor="@color/white"
-            android:textSize="26sp"
+            android:textSize="26dp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:id="@+id/csWords"
-            android:layout_width="300sp"
-            android:layout_height="200sp"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
             android:background="@drawable/radius_red"
             android:gravity="center"
             android:orientation="vertical"
@@ -40,8 +40,8 @@
             app:layout_constraintVertical_bias="0.25">
 
             <com.airbnb.lottie.LottieAnimationView
-                android:layout_width="150sp"
-                android:layout_height="150sp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 app:lottie_autoPlay="true"
                 app:lottie_fileName="c.json"
                 app:lottie_url="@raw/c" />
@@ -53,10 +53,10 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10sp"
+            android:layout_marginBottom="10dp"
             android:text="@string/cs_words"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="18dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/csWords"
             app:layout_constraintEnd_toEndOf="@+id/csWords"
@@ -65,8 +65,8 @@
 
         <LinearLayout
             android:id="@+id/englishWord"
-            android:layout_width="300sp"
-            android:layout_height="200sp"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
             android:background="@drawable/radius_red"
             android:gravity="center"
             android:orientation="vertical"
@@ -77,8 +77,8 @@
             app:layout_constraintVertical_bias="0.75">
 
             <com.airbnb.lottie.LottieAnimationView
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 app:lottie_autoPlay="true"
                 app:lottie_fileName="a.json"
                 app:lottie_url="@raw/a" />
@@ -90,16 +90,16 @@
             android:layout_height="wrap_content"
             android:text="@string/english_words"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="18dp"
             android:textStyle="bold"
-            android:layout_marginBottom="10sp"
+            android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toBottomOf="@+id/englishWord"
             app:layout_constraintEnd_toEndOf="@+id/englishWord"
             app:layout_constraintStart_toStartOf="@+id/englishWord"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70sp"
+            android:layout_height="70dp"
             android:layout_gravity="bottom"
             android:background="@drawable/nav_background"
             android:baselineAligned="false"
@@ -114,7 +114,7 @@
                 android:id="@+id/home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10sp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 tools:ignore="UseCompoundDrawables">
@@ -139,7 +139,7 @@
                 android:id="@+id/words"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10sp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 tools:ignore="UseCompoundDrawables">
@@ -163,7 +163,7 @@
                 android:id="@+id/learning"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10sp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 tools:ignore="UseCompoundDrawables">
@@ -187,7 +187,7 @@
                 android:id="@+id/setting"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10sp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 tools:ignore="UseCompoundDrawables">

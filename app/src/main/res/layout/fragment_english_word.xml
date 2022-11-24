@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/statText"
                 android:textColor="@color/white"
-                android:textSize="26sp"
+                android:textSize="26dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +37,7 @@
                 android:id="@+id/levelUp"
                 android:background="@drawable/radius_red"
                 android:text="@string/level_up"
-                android:textSize="14sp"
+                android:textSize="14dp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:layout_width="100dp"
@@ -57,7 +57,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70sp"
+            android:layout_height="70dp"
             android:layout_gravity="bottom"
             android:background="@drawable/nav_background"
             android:baselineAligned="false"
@@ -72,7 +72,7 @@
                 android:id="@+id/home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10sp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 tools:ignore="UseCompoundDrawables">
@@ -97,7 +97,7 @@
                 android:id="@+id/words"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10sp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 tools:ignore="UseCompoundDrawables">
@@ -121,7 +121,7 @@
                 android:id="@+id/learning"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10sp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 tools:ignore="UseCompoundDrawables">
@@ -145,7 +145,7 @@
                 android:id="@+id/setting"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10sp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 tools:ignore="UseCompoundDrawables">
