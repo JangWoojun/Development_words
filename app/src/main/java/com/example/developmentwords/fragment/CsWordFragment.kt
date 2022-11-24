@@ -55,7 +55,6 @@ class CsWordFragment : Fragment() {
             val intent = Intent(context, QuizActivity::class.java)
             startActivity(intent)
             intent.putExtra("type","cs")
-            activity?.finish()
         }
 
 

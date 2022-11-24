@@ -54,7 +54,6 @@ class EnglishWordFragment : Fragment() {
             val intent = Intent(context,QuizActivity::class.java)
             startActivity(intent)
             intent.putExtra("type","english")
-            activity?.finish()
         }
 
         auth = Firebase.auth
