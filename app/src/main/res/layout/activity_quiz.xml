@@ -36,7 +36,7 @@
                 android:orientation="vertical">
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:background="@drawable/radius_button_gray"
+                    android:background="@drawable/radius_white"
                     android:id="@+id/tv_option_one"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
                     tools:text="Apple" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:background="@drawable/radius_button_gray"
+                    android:background="@drawable/radius_white"
                     android:id="@+id/tv_option_two"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
                     tools:text="Google" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:background="@drawable/radius_button_gray"
+                    android:background="@drawable/radius_white"
                     android:id="@+id/tv_option_three"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
                     tools:text="Android Inc." />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:background="@drawable/radius_button_gray"
+                    android:background="@drawable/radius_white"
                     android:id="@+id/tv_option_four"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
