@@ -52,8 +52,8 @@ class EnglishWordFragment : Fragment() {
 
         binding.levelUp.setOnClickListener {
             val intent = Intent(context,QuizActivity::class.java)
-            startActivity(intent)
             intent.putExtra("type","english")
+            startActivity(intent)
         }
 
         auth = Firebase.auth
