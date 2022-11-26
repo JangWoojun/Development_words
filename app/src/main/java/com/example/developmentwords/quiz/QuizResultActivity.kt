@@ -30,7 +30,8 @@ class QuizResultActivity : AppCompatActivity() {
         val button1 = findViewById<Button>(R.id.button1)
 
         val database = Firebase.database
-        val level = database.getReference("users").child(auth.currentUser?.uid.toString()).child("${type}Level")
+        val myRef = database.getReference("users").child(auth.currentUser?.uid.toString())
+
 
         tv8.text = getString(R.string.result_text4,o)
         tv9.text = getString(R.string.result_text5,x)
@@ -38,10 +39,9 @@ class QuizResultActivity : AppCompatActivity() {
 
         if (p==100){
             button1.text = "승급 성공"
-            level.get().addOnSuccessListener{
+            myRef.get().addOnSuccessListener{
                 val value = it.value as Int
-                level.child("users").child(auth.currentUser?.uid.toString())
-                    .child("${type}Level").setValue(value+1)
+                myRef.child("${type}Level").setValue(value+1)
             }
             button1.setOnClickListener {
                 val intent = Intent(this, MainActivity::class.java)
