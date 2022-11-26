@@ -168,11 +168,13 @@
 
                 <TextView
                     android:id="@+id/textView12"
-                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:text="Good"
-                    android:textColor="@color/black"
-                    android:textSize="40dp"
+                    android:text="Well Done!"
+                    android:background="#f7e600"
+                    android:textColor="@color/white"
+                    android:textSize="28dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -184,11 +186,30 @@
 
         </androidx.cardview.widget.CardView>
 
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_weight="2"
+        <LinearLayout
+            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="0dp">
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/radius_red"
+                android:text="레벨업 도전"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/button1"
@@ -198,18 +219,10 @@
                 android:layout_marginEnd="30dp"
                 android:background="@drawable/radius_red"
                 android:text="암기 종료"
-                android:textSize="24dp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.266" />
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
+        </LinearLayout>
 
     </LinearLayout>
 
