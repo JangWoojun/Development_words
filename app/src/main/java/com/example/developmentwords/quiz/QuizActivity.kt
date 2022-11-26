@@ -23,6 +23,8 @@ import com.google.firebase.ktx.Firebase
 class QuizActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private val handler = Handler(Looper.getMainLooper())
+    var o = 0
+    var x = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +44,10 @@ class QuizActivity : AppCompatActivity() {
     }
     fun get(type : String,i: Int){
         if (i==16){
-            val intent = Intent(this,MainActivity::class.java)
+            val intent = Intent(this,QuizResultActivity::class.java)
+            intent.putExtra("o",o.toString())
+            intent.putExtra("x",x.toString())
+            intent.putExtra("type",type)
             startActivity(intent)
             finish()
         }
@@ -94,6 +99,8 @@ class QuizActivity : AppCompatActivity() {
                             tvOptionOne.setTypeface( null, Typeface.BOLD )
                             item1.visibility = View.VISIBLE
 
+                            o+=1
+
                             handler.postDelayed({
                                 get(type,j)
                             },100)
@@ -111,6 +118,8 @@ class QuizActivity : AppCompatActivity() {
                             tvOptionOne.setTextColor(Color.parseColor("#ffffff"))
                             tvOptionOne.setTypeface( null, Typeface.BOLD )
                             item2.visibility = View.VISIBLE
+
+                            x+=1
 
                             handler.postDelayed({
                                 get(type,j)
@@ -138,6 +147,8 @@ class QuizActivity : AppCompatActivity() {
                             tvOptionTwo.setTypeface( null, Typeface.BOLD )
                             item1.visibility = View.VISIBLE
 
+                            o+=1
+
                             handler.postDelayed({
                                 get(type,j)
                             },100)
@@ -155,6 +166,8 @@ class QuizActivity : AppCompatActivity() {
                             tvOptionTwo.setTextColor(Color.parseColor("#ffffff"))
                             tvOptionTwo.setTypeface( null, Typeface.BOLD )
                             item2.visibility = View.VISIBLE
+
+                            x+=1
 
                             handler.postDelayed({
                                 get(type,j)
@@ -182,6 +195,8 @@ class QuizActivity : AppCompatActivity() {
                             tvOptionThree.setTypeface( null, Typeface.BOLD )
                             item1.visibility = View.VISIBLE
 
+                            o+=1
+
                             handler.postDelayed({
                                 get(type,j)
                             },100)
@@ -199,6 +214,8 @@ class QuizActivity : AppCompatActivity() {
                             tvOptionThree.setTextColor(Color.parseColor("#ffffff"))
                             tvOptionThree.setTypeface( null, Typeface.BOLD )
                             item2.visibility = View.VISIBLE
+
+                            x+=1
 
                             handler.postDelayed({
                                 get(type,j)
@@ -226,6 +243,8 @@ class QuizActivity : AppCompatActivity() {
                             tvOptionFour.setTypeface( null, Typeface.BOLD )
                             item1.visibility = View.VISIBLE
 
+                            o+=1
+
                             handler.postDelayed({
                                 get(type,j)
                             },100)
@@ -243,6 +262,8 @@ class QuizActivity : AppCompatActivity() {
                             tvOptionFour.setTextColor(Color.parseColor("#ffffff"))
                             tvOptionFour.setTypeface( null, Typeface.BOLD )
                             item2.visibility = View.VISIBLE
+
+                            x+=1
 
                             handler.postDelayed({
                                 get(type,j)
