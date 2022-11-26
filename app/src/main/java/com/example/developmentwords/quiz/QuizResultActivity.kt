@@ -37,6 +37,8 @@ class QuizResultActivity : AppCompatActivity() {
         tv9.text = getString(R.string.result_text5,x)
         tv10.text = "$p%"
 
+        myRef.child("todayWord").setValue(o!!.toLong())
+
         if (p==100){
             button1.text = "승급 성공"
             myRef.get().addOnSuccessListener{
