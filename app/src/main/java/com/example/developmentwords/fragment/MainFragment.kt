@@ -17,6 +17,9 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.HashMap
 
 class MainFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
@@ -37,11 +40,26 @@ class MainFragment : Fragment() {
         val database = Firebase.database
         val myRef = database.getReference("users").child(auth.currentUser?.uid.toString())
 
+        val formatYYYYMMdd = "yyyyMMdd"
+        val currentTime: Date = Calendar.getInstance().time
+        val format = SimpleDateFormat(formatYYYYMMdd, Locale.getDefault())
+        val current: String = format.format(currentTime)
+
         myRef.get().addOnSuccessListener {
             val value : HashMap<String, Long> = it.value as HashMap<String, Long>
 
             val csLevel = value["csLevel"]
             val englishLevel = value["englishLevel"]
+            val lastTime = value["lastTime"]
+            val todayWord = value["todayWord"]
+
+            if (current.toLong() == lastTime){
+                binding.textView3.text = getString(R.string.today_study_word_text,todayWord)
+            }
+            else {
+                myRef.child("todayWord").setValue(0)
+                binding.textView3.text = getString(R.string.today_study_word_text,todayWord)
+            }
 
             binding.statText.text = getString(R.string.statText1,csLevel.toString(),englishLevel.toString())
         }
