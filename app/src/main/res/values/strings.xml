@@ -6,7 +6,7 @@
     <string name="cs_study">CS 학습</string>
     <string name="cs_words">CS 단어장</string>
     <string name="header_text">오늘도 열심히 \n코딩 공부를 해봐요!</string>
-    <string name="today_study_word_text">오늘 학습한 단어 n개</string>
+    <string name="today_study_word_text">오늘 학습한 단어 %d개</string>
     <string name="goal_learning_text">목표 학습량</string>
     <string name="rocket">rocket</string>
     <string name="progressbar_text">0/5</string>
