@@ -64,7 +64,7 @@
                     android:gravity="center"
                     android:padding="15dp"
                     android:textColor="#7A8089"
-                    android:textSize="14dp"
+                    android:textSize="16dp"
                     tools:text="Apple" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -78,7 +78,7 @@
                     android:gravity="center"
                     android:padding="15dp"
                     android:textColor="#7A8089"
-                    android:textSize="14dp"
+                    android:textSize="16dp"
                     tools:text="Google" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -92,7 +92,7 @@
                     android:gravity="center"
                     android:padding="15dp"
                     android:textColor="#7A8089"
-                    android:textSize="14dp"
+                    android:textSize="16dp"
                     tools:text="Android Inc." />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -102,11 +102,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="20dp"
                     android:layout_marginStart="20dp"
-                    android:layout_marginBottom="15dp"
+                    android:layout_marginBottom="20dp"
                     android:gravity="center"
                     android:padding="15dp"
                     android:textColor="#7A8089"
-                    android:textSize="14dp"
+                    android:textSize="16dp"
                     tools:text="Nokia" />
 
             </LinearLayout>
