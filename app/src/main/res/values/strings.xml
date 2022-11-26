@@ -36,4 +36,7 @@
     <string name="result_text4">%s/15</string>
     <string name="result_text5">%s/15</string>
     <string name="level_up">level up</string>
+    <string name="levelUp">Level Up</string>
+    <string name="fail">Fail</string>
+    <string name="quizExit">퀴즈 종료</string>
 </resources>
