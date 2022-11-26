@@ -43,7 +43,9 @@ class QuizResultActivity : AppCompatActivity() {
             button1.text = "승급 성공"
             myRef.get().addOnSuccessListener{
                 val value = it.value as Int
-                myRef.child("${type}Level").setValue(value+1)
+                if (value<=5){ // TODO 임시 레벨 제한 부분
+                    myRef.child("${type}Level").setValue(value+1)
+                }
             }
             button1.setOnClickListener {
                 val intent = Intent(this, MainActivity::class.java)
