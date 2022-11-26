@@ -8,6 +8,7 @@ import android.widget.TextView
 import com.example.developmentwords.MainActivity
 import com.example.developmentwords.R
 import com.example.developmentwords.databinding.ActivityResultBinding
+import com.example.developmentwords.quiz.QuizActivity
 
 class ResultActivity : AppCompatActivity() {
     private lateinit var binding: ActivityResultBinding
@@ -24,6 +25,7 @@ class ResultActivity : AppCompatActivity() {
         val tv9 = findViewById<TextView>(R.id.textView9)
         val tv10 = findViewById<TextView>(R.id.textView10)
         val button1 = findViewById<Button>(R.id.button1)
+        val button2 = findViewById<Button>(R.id.button2)
 
         tv8.text = getString(R.string.result_text4,o)
         tv9.text = getString(R.string.result_text5,x)
@@ -31,6 +33,11 @@ class ResultActivity : AppCompatActivity() {
 
         button1.setOnClickListener{
             val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+        button2.setOnClickListener {
+            val intent = Intent(this,QuizActivity::class.java)
             startActivity(intent)
             finish()
         }
