@@ -89,6 +89,7 @@ class QuizActivity : AppCompatActivity() {
                     tvOptionOne.setOnClickListener {
 
                         val click = 1
+                        tvOptionOne.isClickable = false
                         tvOptionTwo.isClickable = false
                         tvOptionThree.isClickable = false
                         tvOptionFour.isClickable = false
@@ -138,6 +139,7 @@ class QuizActivity : AppCompatActivity() {
                         val click = 2
 
                         tvOptionOne.isClickable = false
+                        tvOptionTwo.isClickable = false
                         tvOptionThree.isClickable = false
                         tvOptionFour.isClickable = false
 
@@ -185,8 +187,9 @@ class QuizActivity : AppCompatActivity() {
                     tvOptionThree.setOnClickListener {
                         val click = 3
 
-                        tvOptionTwo.isClickable = false
                         tvOptionOne.isClickable = false
+                        tvOptionTwo.isClickable = false
+                        tvOptionThree.isClickable = false
                         tvOptionFour.isClickable = false
 
                         if (chk == click){
@@ -233,9 +236,10 @@ class QuizActivity : AppCompatActivity() {
                     tvOptionFour.setOnClickListener {
                         val click = 4
 
+                        tvOptionOne.isClickable = false
                         tvOptionTwo.isClickable = false
                         tvOptionThree.isClickable = false
-                        tvOptionOne.isClickable = false
+                        tvOptionFour.isClickable = false
 
                         if (chk == click){
                             it.setBackgroundResource(R.drawable.radius_green)
