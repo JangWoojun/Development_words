@@ -25,6 +25,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
+            <ImageView
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:background="@drawable/_666736_x_circle_icon"
+                android:id="@+id/cardItem2"
+                android:layout_width="200dp"
+                android:layout_height="200dp"/>
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:background="@drawable/_530650_check_circle_icon"
+                android:id="@+id/cardItem1"
+                android:layout_width="200dp"
+                android:layout_height="200dp"/>
+
+
+
         </androidx.cardview.widget.CardView>
 
 
