@@ -1,6 +1,7 @@
 package com.example.developmentwords.quiz
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -28,6 +29,7 @@ class QuizResultActivity : AppCompatActivity() {
         val tv9 = findViewById<TextView>(R.id.textView9)
         val tv10 = findViewById<TextView>(R.id.textView10)
         val button1 = findViewById<Button>(R.id.button1)
+        val tv12 = findViewById<TextView>(R.id.textView12)
 
         val database = Firebase.database
         val myRef = database.getReference("users").child(auth.currentUser?.uid.toString())
@@ -40,7 +42,7 @@ class QuizResultActivity : AppCompatActivity() {
         myRef.child("todayWord").setValue(o!!.toLong())
 
         if (p==100){
-            button1.text = "승급 성공"
+            tv12.text = getString(R.string.levelUp)
             myRef.get().addOnSuccessListener{
                 val value = it.value as Int
                 if (value<=5){ // TODO 임시 레벨 제한 부분
@@ -54,6 +56,9 @@ class QuizResultActivity : AppCompatActivity() {
             }
         }
         else {
+            tv12.text = getString(R.string.fail)
+            tv12.setTextColor(Color.parseColor("#D7263D"))
+
             button1.text = "승급 실패"
             button1.setOnClickListener {
                 val intent = Intent(this, MainActivity::class.java)
