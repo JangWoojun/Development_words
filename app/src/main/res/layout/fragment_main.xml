@@ -114,6 +114,7 @@
                         tools:layout_editor_absoluteX="20dp" />
 
                     <TextView
+                        android:id="@+id/progressBarText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/progressbar_text"
