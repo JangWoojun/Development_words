@@ -6,15 +6,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import com.example.developmentwords.MainActivity
 import com.example.developmentwords.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import es.dmoral.toasty.Toasty
 
 class QuizResultActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
+    var mBackWait:Long = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_result)
@@ -67,5 +70,13 @@ class QuizResultActivity : AppCompatActivity() {
             }
         }
 
+    }
+    override fun onBackPressed() {
+        if(System.currentTimeMillis() - mBackWait >=2000 ) {
+            mBackWait = System.currentTimeMillis()
+            Toasty.warning(this, "한번 더 누르시면 종료됩니다", Toast.LENGTH_SHORT, true).show()
+        } else {
+            finish() //액티비티 종료
+        }
     }
 }

@@ -12,19 +12,20 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.os.postDelayed
-import com.example.developmentwords.MainActivity
+import android.widget.Toast
 import com.example.developmentwords.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import es.dmoral.toasty.Toasty
 
 class QuizActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private val handler = Handler(Looper.getMainLooper())
     var o = 0
     var x = 0
+    var mBackWait:Long = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -308,5 +309,12 @@ class QuizActivity : AppCompatActivity() {
         tvOptionFour.setBackgroundResource(R.drawable.radius_white)
         tvOptionFour.setTextColor(Color.parseColor("#7A8089"))
     }
-
+    override fun onBackPressed() {
+        if(System.currentTimeMillis() - mBackWait >=2000 ) {
+            mBackWait = System.currentTimeMillis()
+            Toasty.warning(this, "한번 더 누르시면 종료됩니다", Toast.LENGTH_SHORT, true).show()
+        } else {
+            finish() //액티비티 종료
+        }
+    }
 }

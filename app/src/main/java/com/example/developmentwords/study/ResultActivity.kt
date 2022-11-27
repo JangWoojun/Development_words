@@ -5,12 +5,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import com.example.developmentwords.MainActivity
 import com.example.developmentwords.R
 import com.example.developmentwords.databinding.ActivityResultBinding
 import com.example.developmentwords.quiz.QuizActivity
+import es.dmoral.toasty.Toasty
 
 class ResultActivity : AppCompatActivity() {
+    var mBackWait:Long = 0
     private lateinit var binding: ActivityResultBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,5 +45,13 @@ class ResultActivity : AppCompatActivity() {
             finish()
         }
 
+    }
+    override fun onBackPressed() {
+        if(System.currentTimeMillis() - mBackWait >=2000 ) {
+            mBackWait = System.currentTimeMillis()
+            Toasty.warning(this, "한번 더 누르시면 종료됩니다", Toast.LENGTH_SHORT, true).show()
+        } else {
+            finish() //액티비티 종료
+        }
     }
 }

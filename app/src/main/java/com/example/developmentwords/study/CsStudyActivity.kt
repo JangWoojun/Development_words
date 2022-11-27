@@ -18,9 +18,11 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.yuyakaido.android.cardstackview.*
+import es.dmoral.toasty.Toasty
 
 
 class CsStudyActivity : AppCompatActivity() {
+    var mBackWait:Long = 0
     private lateinit var binding : ActivityCsStudyBinding
     lateinit var cardStackAdapter: CardStackAdapter
     lateinit var manager: CardStackLayoutManager
@@ -134,6 +136,14 @@ class CsStudyActivity : AppCompatActivity() {
                 }
                 binding.cardStackView.adapter?.notifyDataSetChanged()
             }
+        }
+    }
+    override fun onBackPressed() {
+        if(System.currentTimeMillis() - mBackWait >=2000 ) {
+            mBackWait = System.currentTimeMillis()
+            Toasty.warning(this, "한번 더 누르시면 종료됩니다", Toast.LENGTH_SHORT, true).show()
+        } else {
+            finish() //액티비티 종료
         }
     }
 }
