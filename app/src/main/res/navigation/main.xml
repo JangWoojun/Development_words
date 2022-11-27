@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/wordFragment"
-        android:name="com.example.developmentwords.fragment.WordFragment"
+        android:name="com.developmentwords.developmentwords.fragment.WordFragment"
         android:label="fragment_word"
         tools:layout="@layout/fragment_word" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/studyFragment"
-        android:name="com.example.developmentwords.fragment.StudyFragment"
+        android:name="com.developmentwords.developmentwords.fragment.StudyFragment"
         android:label="fragment_study"
         tools:layout="@layout/fragment_study" >
         <action
@@ -49,7 +49,7 @@
     </fragment>
     <fragment
         android:id="@+id/settingFragment"
-        android:name="com.example.developmentwords.fragment.SettingFragment"
+        android:name="com.developmentwords.developmentwords.fragment.SettingFragment"
         android:label="fragment_setting"
         tools:layout="@layout/fragment_setting" >
         <action
@@ -70,7 +70,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.developmentwords.fragment.MainFragment"
+        android:name="com.developmentwords.developmentwords.fragment.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -91,7 +91,7 @@
     </fragment>
     <fragment
         android:id="@+id/csWordFragment"
-        android:name="com.example.developmentwords.fragment.CsWordFragment"
+        android:name="com.developmentwords.developmentwords.fragment.CsWordFragment"
         android:label="fragment_cs_word"
         tools:layout="@layout/fragment_cs_word" >
         <action
@@ -112,7 +112,7 @@
     </fragment>
     <fragment
         android:id="@+id/englishWordFragment"
-        android:name="com.example.developmentwords.fragment.EnglishWordFragment"
+        android:name="com.developmentwords.developmentwords.fragment.EnglishWordFragment"
         android:label="fragment_english_word"
         tools:layout="@layout/fragment_english_word" >
         <action

@@ -1,11 +1,11 @@
-package com.example.developmentwords.study
+package com.developmentwords.developmentwords.study
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.developmentwords.databinding.CardItemBinding
-import com.example.developmentwords.recyclerview.Voca
+import com.developmentwords.developmentwords.databinding.CardItemBinding
+import com.developmentwords.developmentwords.recyclerview.Voca
 
 class CardStackAdapter(private val items:List<Voca>) :
     RecyclerView.Adapter<CardStackAdapter.CardViewHolder>() {

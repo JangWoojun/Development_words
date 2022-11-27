@@ -1,4 +1,4 @@
-package com.example.developmentwords
+package com.developmentwords.developmentwords
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

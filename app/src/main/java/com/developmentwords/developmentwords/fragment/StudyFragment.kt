@@ -1,4 +1,4 @@
-package com.example.developmentwords.fragment
+package com.developmentwords.developmentwords.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,10 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
-import com.example.developmentwords.R
-import com.example.developmentwords.databinding.FragmentStudyBinding
-import com.example.developmentwords.study.CsStudyActivity
-import com.example.developmentwords.study.EnglishStudyActivity
+import com.developmentwords.developmentwords.R
+import com.developmentwords.developmentwords.databinding.FragmentStudyBinding
+import com.developmentwords.developmentwords.study.CsStudyActivity
+import com.developmentwords.developmentwords.study.EnglishStudyActivity
 
 
 class StudyFragment : Fragment() {

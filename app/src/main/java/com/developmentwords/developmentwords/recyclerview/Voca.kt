@@ -1,4 +1,4 @@
-package com.example.developmentwords.recyclerview
+package com.developmentwords.developmentwords.recyclerview
 
 data class Voca(
     val word: String,

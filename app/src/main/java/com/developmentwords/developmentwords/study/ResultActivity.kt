@@ -1,4 +1,4 @@
-package com.example.developmentwords.study
+package com.developmentwords.developmentwords.study
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,10 +6,10 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import com.example.developmentwords.MainActivity
-import com.example.developmentwords.R
-import com.example.developmentwords.databinding.ActivityResultBinding
-import com.example.developmentwords.quiz.QuizActivity
+import com.developmentwords.developmentwords.MainActivity
+import com.developmentwords.developmentwords.R
+import com.developmentwords.developmentwords.databinding.ActivityResultBinding
+import com.developmentwords.developmentwords.quiz.QuizActivity
 import es.dmoral.toasty.Toasty
 
 class ResultActivity : AppCompatActivity() {

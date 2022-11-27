@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.developmentwords'
+    namespace 'com.developmentwords.developmentwords'
     compileSdk 32
 
     viewBinding{
@@ -13,7 +13,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.developmentwords"
+        applicationId "com.developmentwords.developmentwords"
         minSdk 21
         targetSdk 32
         versionCode 1

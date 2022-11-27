@@ -1,4 +1,4 @@
-package com.example.developmentwords.fragment
+package com.developmentwords.developmentwords.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,11 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.developmentwords.R
-import com.example.developmentwords.databinding.FragmentEnglishWordBinding
-import com.example.developmentwords.quiz.QuizActivity
-import com.example.developmentwords.recyclerview.Voca
-import com.example.developmentwords.recyclerview.WordAdapter
+import com.developmentwords.developmentwords.R
+import com.developmentwords.developmentwords.databinding.FragmentEnglishWordBinding
+import com.developmentwords.developmentwords.quiz.QuizActivity
+import com.developmentwords.developmentwords.recyclerview.Voca
+import com.developmentwords.developmentwords.recyclerview.WordAdapter
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.ktx.database

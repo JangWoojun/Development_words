@@ -1,4 +1,4 @@
-package com.example.developmentwords.study
+package com.developmentwords.developmentwords.study
 
 import android.animation.ObjectAnimator
 import android.content.Context
@@ -9,9 +9,9 @@ import android.os.Vibrator
 import android.util.Log
 import android.view.View
 import android.widget.Toast
-import com.example.developmentwords.R
-import com.example.developmentwords.databinding.ActivityEnglishStudyBinding
-import com.example.developmentwords.recyclerview.Voca
+import com.developmentwords.developmentwords.R
+import com.developmentwords.developmentwords.databinding.ActivityEnglishStudyBinding
+import com.developmentwords.developmentwords.recyclerview.Voca
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.ktx.database
@@ -56,7 +56,7 @@ class EnglishStudyActivity : AppCompatActivity() {
                 }
                 else {
                     ++o
-                    binding.message.text = getString(com.example.developmentwords.R.string.good)
+                    binding.message.text = getString(com.developmentwords.developmentwords.R.string.good)
                     binding.message.visibility = View.VISIBLE
                     val fadeOut = ObjectAnimator.ofFloat(binding.message, "alpha", 1f, 0f)
                     fadeOut.duration = 1500

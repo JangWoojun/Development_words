@@ -1,4 +1,4 @@
-package com.example.developmentwords
+package com.developmentwords.developmentwords
 
 import org.junit.Test
 

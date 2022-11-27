@@ -1,4 +1,4 @@
-package com.example.developmentwords
+package com.developmentwords.developmentwords
 
 import android.content.Intent
 import android.os.Bundle

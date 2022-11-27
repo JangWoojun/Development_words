@@ -1,10 +1,10 @@
-package com.example.developmentwords.recyclerview
+package com.developmentwords.developmentwords.recyclerview
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.developmentwords.databinding.ListItemBinding
+import com.developmentwords.developmentwords.databinding.ListItemBinding
 
 private var chkWord: String = ""
 

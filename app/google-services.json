@@ -1,15 +1,16 @@
 {
   "project_info": {
     "project_number": "166501267988",
+    "firebase_url": "https://developmentwords-b6c2a-default-rtdb.firebaseio.com",
     "project_id": "developmentwords-b6c2a",
     "storage_bucket": "developmentwords-b6c2a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:166501267988:android:63704f08b56022f8ef0501",
+        "mobilesdk_app_id": "1:166501267988:android:7ed42974a6a661e8ef0501",
         "android_client_info": {
-          "package_name": "com.example.developmentwords"
+          "package_name": "com.developmentwords.developmentwords"
         }
       },
       "oauth_client": [

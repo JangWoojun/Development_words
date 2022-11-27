@@ -1,4 +1,4 @@
-package com.example.developmentwords
+package com.developmentwords.developmentwords
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
