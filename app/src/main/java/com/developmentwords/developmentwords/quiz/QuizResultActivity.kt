@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -47,7 +48,8 @@ class QuizResultActivity : AppCompatActivity() {
         if (p==100){
             tv12.text = getString(R.string.levelUp)
             myRef.get().addOnSuccessListener{
-                val value = it.value as Int
+                val value1 = it.value as HashMap<String,Long>
+                val value = value1["${type}Level"] as Long
                 if (value<=5){ // TODO 임시 레벨 제한 부분
                     myRef.child("${type}Level").setValue(value+1)
                 }
