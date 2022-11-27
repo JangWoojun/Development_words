@@ -57,7 +57,15 @@ class SettingFragment : Fragment() {
             startActivity(intent)
         }
 
+        binding.click4.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/JangWoojun"))
+            startActivity(intent)
+        }
 
+        binding.click4.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://sch10719.neocities.org/privacypolicy.html"))
+            startActivity(intent)
+        }
 
         return binding.root
     }
