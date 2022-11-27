@@ -53,6 +53,9 @@ class MainFragment : Fragment() {
             val lastTime = value["lastTime"]
             val todayWord = value["todayWord"]
 
+            binding.progressBar.progress = todayWord!!.toInt()
+            binding.progressBarText.text = "$todayWord/5"
+
             if (current.toLong() == lastTime){
                 binding.textView3.text = getString(R.string.today_study_word_text,todayWord)
             }
