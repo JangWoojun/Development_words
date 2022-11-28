@@ -16,7 +16,7 @@ android {
         applicationId "com.developmentwords.developmentwords"
         minSdk 21
         targetSdk 32
-        versionCode 1
+        versionCode 3
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -24,7 +24,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -51,6 +51,9 @@ dependencies {
     implementation "com.airbnb.android:lottie:5.2.0"
 
     implementation platform('com.google.firebase:firebase-bom:30.3.1')
+    implementation ('com.google.firebase:firebase-auth:17.0.0'){
+        exclude group: 'com.google.android.gms', module: 'play-services-safetynet'
+    }
     implementation 'com.google.firebase:firebase-database:20.0.5'
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-auth-ktx'
