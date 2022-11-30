@@ -52,4 +52,4 @@
 
 ## 설치 방법
 
-- 구글 플레이스토어 주소 : [링크]([https://play.google.com/store/apps/details?id=com.speedtest.clickgame](https://play.google.com/store/apps/details?id=com.developmentwords.developmentwords&pli=1))
+- 구글 플레이스토어 주소 : [링크](https://play.google.com/store/apps/details?id=com.developmentwords.developmentwords&pli=1)
