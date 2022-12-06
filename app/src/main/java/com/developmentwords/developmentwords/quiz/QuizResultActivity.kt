@@ -50,8 +50,11 @@ class QuizResultActivity : AppCompatActivity() {
             myRef.get().addOnSuccessListener{
                 val value1 = it.value as HashMap<String,Long>
                 val value = value1["${type}Level"] as Long
-                if (value<=5){ // TODO 임시 레벨 제한 부분
+                if (value<=1){ // TODO 임시 레벨 제한 부분
                     myRef.child("${type}Level").setValue(value+1)
+                }
+                else {
+                    Toasty.normal(this, "다음 레벨 컨텐츠는 업데이트 준비중입니다!", Toast.LENGTH_SHORT).show()
                 }
             }
             button1.setOnClickListener {
