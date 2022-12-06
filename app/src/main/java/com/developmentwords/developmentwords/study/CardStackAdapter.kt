@@ -1,5 +1,6 @@
 package com.developmentwords.developmentwords.study
 
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,6 +21,9 @@ class CardStackAdapter(private val items:List<Voca>) :
                 if (binding.wordText.visibility == View.VISIBLE){
                     binding.wordText.visibility = View.INVISIBLE
                     binding.meanText.visibility = View.VISIBLE
+                    if (binding.meanText.text.length < 8){
+                        binding.meanText.textSize = 28F
+                    }
                     binding.touchText.text = "터치하여 단어 확인"
                 }
                 else {
