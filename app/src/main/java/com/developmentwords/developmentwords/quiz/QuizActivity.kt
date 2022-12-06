@@ -7,12 +7,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import com.developmentwords.developmentwords.MainActivity
 import com.developmentwords.developmentwords.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -33,13 +33,26 @@ class QuizActivity : AppCompatActivity() {
         val type = intent.getStringExtra("type")
         auth = Firebase.auth
 
-        Log.d("확인",type.toString())
+        val database = Firebase.database
+        val myRef = database.getReference("users").child(auth.currentUser?.uid.toString())
 
-        if (type == "english"){
-            get("english",1)
-        }
-        else {
-            get("cs",1)
+        myRef.get().addOnSuccessListener{
+            val value1 = it.value as HashMap<String,Long>
+            val value = value1["${type}Level"] as Long
+            if (value>2){ //
+                Toasty.normal(this, "다음 레벨 컨텐츠는 준비중입니다", Toast.LENGTH_SHORT).show()
+
+                val intent = Intent(this,MainActivity::class.java)
+                startActivity(intent)
+            }
+            else {
+                if (type == "english"){
+                    get("english",1)
+                }
+                else {
+                    get("cs",1)
+                }
+            }
         }
 
     }
