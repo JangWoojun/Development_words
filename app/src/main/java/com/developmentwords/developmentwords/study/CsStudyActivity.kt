@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Vibrator
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -52,7 +51,6 @@ class CsStudyActivity : AppCompatActivity() {
                     val vibe = getSystemService(VIBRATOR_SERVICE) as Vibrator
                     vibe.vibrate(50)
                     ++count
-                    Log.d("확인",count.toString())
                 }
                 else {
                     ++o
@@ -64,7 +62,6 @@ class CsStudyActivity : AppCompatActivity() {
                     val vibe = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
                     vibe.vibrate(50)
                     ++count
-                    Log.d("확인",count.toString())
                 }
                 if (count==15){
                     val intent = Intent(this@CsStudyActivity,ResultActivity::class.java)
@@ -125,7 +122,6 @@ class CsStudyActivity : AppCompatActivity() {
             val value = it.value
             binding.csWordLv.text = "CS Lv.$value"
             val voca = database.getReference("csWord").child("lv$value")
-            Log.d("여기",voca.toString())
 
             voca.get().addOnSuccessListener {
                 val value : ArrayList<Any> = it.value as ArrayList<Any>

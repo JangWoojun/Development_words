@@ -4,7 +4,6 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -50,7 +49,7 @@ class QuizResultActivity : AppCompatActivity() {
             myRef.get().addOnSuccessListener{
                 val value1 = it.value as HashMap<String,Long>
                 val value = value1["${type}Level"] as Long
-                if (value<=1){ // TODO 임시 레벨 제한 부분
+                if (value < 2){
                     myRef.child("${type}Level").setValue(value+1)
                 }
                 else {

@@ -23,7 +23,6 @@ class CsWordFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
     private var _binding: FragmentCsWordBinding? = null
     private val binding get() = _binding!!
-    val TAG = "CsWordFragment"
     private val csWords = ArrayList<Voca>()
 
 

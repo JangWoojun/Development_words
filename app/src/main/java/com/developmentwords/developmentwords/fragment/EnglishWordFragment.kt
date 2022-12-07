@@ -21,7 +21,6 @@ import com.google.firebase.ktx.Firebase
 class EnglishWordFragment : Fragment() {
     private var _binding: FragmentEnglishWordBinding? = null
     private val binding get() = _binding!!
-    val TAG = "EnglishWordFragment"
     private lateinit var auth: FirebaseAuth
     private val englishWords = ArrayList<Voca>()
 
