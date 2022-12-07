@@ -23,6 +23,8 @@ class ResultActivity : AppCompatActivity() {
         val o = intent.getStringExtra("o")
         val x = intent.getStringExtra("x")
         val p = (((o?.toFloat())?.div(15))?.times(100))?.toInt()
+        val type = intent.getStringExtra("type")
+
 
         val tv8 = findViewById<TextView>(R.id.textView8)
         val tv9 = findViewById<TextView>(R.id.textView9)
@@ -41,6 +43,7 @@ class ResultActivity : AppCompatActivity() {
         }
         button2.setOnClickListener {
             val intent = Intent(this,QuizActivity::class.java)
+            intent.putExtra("type",type)
             startActivity(intent)
             finish()
         }
