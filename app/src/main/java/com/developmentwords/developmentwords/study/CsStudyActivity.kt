@@ -139,7 +139,7 @@ class CsStudyActivity : AppCompatActivity() {
             mBackWait = System.currentTimeMillis()
             Toasty.warning(this, "한번 더 누르시면 종료됩니다", Toast.LENGTH_SHORT, true).show()
         } else {
-            finish() //액티비티 종료
+            finish()
         }
     }
 }
