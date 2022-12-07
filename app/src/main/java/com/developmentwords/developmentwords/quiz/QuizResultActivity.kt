@@ -49,11 +49,17 @@ class QuizResultActivity : AppCompatActivity() {
             myRef.get().addOnSuccessListener{
                 val value1 = it.value as HashMap<String,Long>
                 val value = value1["${type}Level"] as Long
-                if (value < 2){
-                    myRef.child("${type}Level").setValue(value+1)
-                }
-                else {
-                    Toasty.normal(this, "다음 레벨 컨텐츠는 업데이트 준비중입니다!", Toast.LENGTH_SHORT).show()
+                val maxLevelInf = database.getReference("wordLevel")
+
+                maxLevelInf.get().addOnSuccessListener {
+                    val maxLevel = it.value as Long
+
+                    if (value < maxLevel){
+                        myRef.child("${type}Level").setValue(value+1)
+                    }
+                    else {
+                        Toasty.normal(this, "다음 레벨 컨텐츠는 준비중입니다", Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
             button1.setOnClickListener {
@@ -80,7 +86,7 @@ class QuizResultActivity : AppCompatActivity() {
             mBackWait = System.currentTimeMillis()
             Toasty.warning(this, "한번 더 누르시면 종료됩니다", Toast.LENGTH_SHORT, true).show()
         } else {
-            finish() //액티비티 종료
+            finish()
         }
     }
 }
