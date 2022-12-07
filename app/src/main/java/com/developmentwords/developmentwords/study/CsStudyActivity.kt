@@ -70,6 +70,7 @@ class CsStudyActivity : AppCompatActivity() {
                     val intent = Intent(this@CsStudyActivity,ResultActivity::class.java)
                     intent.putExtra("o",o.toString())
                     intent.putExtra("x",x.toString())
+                    intent.putExtra("type","cs")
                     startActivity(intent)
                     finish()
                 }
