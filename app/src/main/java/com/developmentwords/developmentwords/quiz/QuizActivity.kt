@@ -39,7 +39,7 @@ class QuizActivity : AppCompatActivity() {
         myRef.get().addOnSuccessListener{
             val value1 = it.value as HashMap<String,Long>
             val value = value1["${type}Level"] as Long
-            if (value>2){ //
+            if (value>2){
                 Toasty.normal(this, "다음 레벨 컨텐츠는 준비중입니다", Toast.LENGTH_SHORT).show()
 
                 val intent = Intent(this,MainActivity::class.java)
