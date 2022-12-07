@@ -70,6 +70,7 @@ class EnglishStudyActivity : AppCompatActivity() {
                     val intent = Intent(this@EnglishStudyActivity,ResultActivity::class.java)
                     intent.putExtra("o",o.toString())
                     intent.putExtra("x",x.toString())
+                    intent.putExtra("type","english")
                     startActivity(intent)
                     finish()
                 }
